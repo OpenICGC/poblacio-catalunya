@@ -44,12 +44,14 @@ $(document).ready(function() {
   });
   map.addControl(new mapboxgl.NavigationControl());
   var setCenterFromLayer = true;
+  /*
   map.addControl(new mapboxgl.GeolocateControl({
     positionOptions: {
       enableHighAccuracy: true,
       watchPosition: true
     }
   }));
+  */
 
   var popup = new mapboxgl.Popup({
     closeButton: false
@@ -57,16 +59,16 @@ $(document).ready(function() {
 
 
   //mostrar nivell zoom al costat copyright
-  var controldiv = document.getElementsByClassName("mapboxgl-ctrl-bottom-left")[0];
-  var zoom = document.createElement("div");
+  //var controldiv = document.getElementsByClassName("mapboxgl-ctrl-bottom-left")[0];
+  //var zoom = document.createElement("div");
 
   jQuery('.mapboxgl-ctrl-top-right div:first')
     .append('<button id="bt_pitch" title="Perspectiva" class="mapboxgl-ctrl-icon glyphicon glyphicon-road"></button>');
 
-  zoom.setAttribute("class", "control-zoom");
-  controldiv.appendChild(zoom);
+  //zoom.setAttribute("class", "control-zoom");
+  //controldiv.appendChild(zoom);
   map.on('moveend', function() {
-    zoom.innerHTML = "Nivell zoom: " + parseFloat(map.getZoom()).toFixed(1) + "";
+  //  zoom.innerHTML = "Nivell zoom: " + parseFloat(map.getZoom()).toFixed(1) + "";
   });
 
   jQuery('#bt_pitch').on('click', function() {

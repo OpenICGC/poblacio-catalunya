@@ -34736,7 +34736,996 @@ var styleGris = {
     },*/
 //*************************FINAL TOPONIMIA MTC25M RASTER***********************
 //*********************************INICI PUNTS*********************************
-    {
+{
+    "id": "10100 9 Cap de comarca 7",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level7",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "10100"
+        ]
+    ],
+    "minzoom": 7,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Bold"
+        ],
+        "text-size": 12,
+        "symbol-placement": "point",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#f7f4f4",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "10100 9 Cap de comarca 8",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level8",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "10100"
+        ]
+    ],
+    "minzoom": 8,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Bold"
+        ],
+        "text-size": 13,
+        "symbol-placement": "point",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#f7f4f4",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "10100 9 Cap de comarca 9",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level9",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "10100"
+        ]
+    ],
+    "minzoom": 9,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Bold"
+        ],
+        "text-size": 14,
+        "symbol-placement": "point",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#f7f4f4",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "51004 7 Delta 9",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level9",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "51004"
+        ]
+    ],
+    "minzoom": 9,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 14,
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#417D05",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "10000 9 Cap de municipi 10",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level10",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "10000"
+        ]
+    ],
+    "minzoom": 10,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Regular"
+        ],
+        "text-size": 12,
+        "symbol-placement": "point",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#f7f4f4",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "10100 9 Cap de comarca 10",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level10",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "10100"
+        ]
+    ],
+    "minzoom": 10,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Bold"
+        ],
+        "text-size": 15,
+        "symbol-placement": "point",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#f7f4f4",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "50101 1 Massís  muntanyes 10",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level10",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "50101"
+        ]
+    ],
+    "minzoom": 10,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 14,
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#417D05",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "51004 7 Delta 10",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level10",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "51004"
+        ]
+    ],
+    "minzoom": 10,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 15,
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#417D05",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "00001 17 Municipi 11",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level11",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "00001"
+        ]
+    ],
+    "minzoom": 11,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 12,
+        "symbol-placement": "point",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#7D7D7D",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "10000 9 Cap de municipi 11",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level11",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "10000"
+        ]
+    ],
+    "minzoom": 11,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Regular"
+        ],
+        "text-size": 13,
+        "symbol-placement": "point",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#f7f4f4",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "10100 9 Cap de comarca 11",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level11",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "10100"
+        ]
+    ],
+    "minzoom": 11,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Bold"
+        ],
+        "text-size": 16,
+        "symbol-placement": "point",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#f7f4f4",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "50101 1 Massís  muntanyes 11",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level11",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "50101"
+        ]
+    ],
+    "minzoom": 11,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 15,
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#417D05",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+}
+,
+{
+    "id": "51001 7 Arxipèlag 11",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level11",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "51001"
+        ]
+    ],
+    "minzoom": 11,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 14,
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#417D05",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "51004 7 Delta 11",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level11",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "51004"
+        ]
+    ],
+    "minzoom": 11,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 16,
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#417D05",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "60301 5 Riu 11",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level11",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "60301"
+        ]
+    ],
+    "minzoom": 11,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 12,
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#4D81C6",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "00001 17 Municipi 12",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level12",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "00001"
+        ]
+    ],
+    "minzoom": 12,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 15,
+        "symbol-placement": "point",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#7D7D7D",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "10000 9 Cap de municipi 12",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level12",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "10000"
+        ]
+    ],
+    "minzoom": 12,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Regular"
+        ],
+        "text-size": 14,
+        "symbol-placement": "point",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#f4f4f4",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "10100 9 Cap de comarca 12",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level12",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "10100"
+        ]
+    ],
+    "minzoom": 12,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Bold"
+        ],
+        "text-size": 17,
+        "symbol-placement": "point",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#f4f4f4",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "50101 1 Massís  muntanyes 12",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level12",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "50101"
+        ]
+    ],
+    "minzoom": 12,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 17,
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#417D05",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "50102 1 Serra  serralada  serrat  carena 12",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level12",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "50102"
+        ]
+    ],
+    "minzoom": 12,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 14,
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#417D05",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "51001 7 Arxipèlag 12",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level12",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "51001"
+        ]
+    ],
+    "minzoom": 12,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 15,
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#417D05",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "51004 7 Delta 12",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level12",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "51004"
+        ]
+    ],
+    "minzoom": 12,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 17,
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#417D05",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "60103 6 Golf  badia 12",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level12",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "60103"
+        ]
+    ],
+    "minzoom": 12,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 14,
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#4D81C6",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "60109 6 Mar 12",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level12",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "60109"
+        ]
+    ],
+    "minzoom": 12,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 14,
+        "symbol-placement": "point",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#4D81C6",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "60203 6 Embassament  pantà 12",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level12",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "60203"
+        ]
+    ],
+    "minzoom": 12,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 14,
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#4D81C6",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+},
+{
+    "id": "60301 5 Riu 12",
+    "type": "symbol",
+    "source": "toponimia",
+    "source-layer": "level12",
+    "filter": [
+        "all",
+        [
+            "==",
+            "$type",
+            "LineString"
+        ],
+        [
+            "in",
+            "codi_top",
+            "60301"
+        ]
+    ],
+    "minzoom": 12,
+    "text-allow-overlap": true,
+    "text-ignore-placement": true,
+    "layout": {
+        "text-field": "{text_top}",
+        "text-font": [
+            "Open Sans Italic"
+        ],
+        "text-size": 13,
+        "symbol-placement": "line",
+        "text-anchor": "bottom",
+        "symbol-spacing": 750
+    },
+    "paint": {
+        "text-color": "#4D81C6",
+        "text-halo-color": "rgba(0,0,0,0.75)",
+        "text-halo-width": 1,
+        "text-halo-blur": 1
+    }
+}
+,{
     "interactive": true,
     "id": "museu_1_poi",
     "filter": [
