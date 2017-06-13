@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ca">
+<!--
+ *
+ * Desenvolupat per GEOSTART
+ * "Fet amb el millor gust possible"
+ * Institut Cartogràfic i Geològic de Catalunya (ICGC) Juliol 2015
+ * CC-BY 4.0
+ *
+ * http://betaportal.icgc.cat
+ * v 1.0.0 Juny 2017
+ *
+-->
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="author" content="Institut Cartogràfic i Geològic de Catalunya" />
+	<meta property="fb:app_id" content="620717167980164" />
+	<meta property="og:title" content="Catalunya ull del temps" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="http://betaserver.icgc.cat/visor/css/images/google_play_ull_gencat.png" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:url" content="http://betaserver.icgc.cat/visor/catalunya_ull_del_temps.html" />
+	<meta property="og:description" content="Grid pobalcio Catalunya 2014" />
+	<meta name="description" content="Grid pobalcio Catalunya 2014" />
+	<meta name="robots" content="index,follow" />
+	<meta name="geo.region" content="ES-CT" />
+	<meta name="geo.placename" content="Barcelona" />
+	<meta name="geo.position" content="41.363892;2.186279" />
+	<meta name="language" content="ca" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<link rel='stylesheet' href='/vendors/mapbox-gl-0.37.0/mapbox-gl.css' />
+	<link rel="stylesheet" href="/vendors/bootstrap-3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/vendors/css/bootstrap-colorpicker.min.css">
+	<link rel="stylesheet" href="/vendors/font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="/vendors/uislider-10.0.0/nouislider.min.css" />
+	<link rel="stylesheet" href="css/gridpoblacio.css">
+
+
+	<script src="/vendors/js/jquery-3.2.1.min.js"></script>
+	<script src="/vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script src="/vendors/js/bootstrap-colorpicker.min.js"></script>
+	<script src="/vendors/chroma/chroma.min.js"></script>
+	<script src="/vendors/wnumb-1.1.0/wNumb.js"></script>
+	<script src="/vendors/uislider-10.0.0/nouislider.min.js"></script>
+	<script src="js/mapbox-gl-dev-0.37.js"></script>
+	<script src="js/cercallocs-1.0.0.js"></script>
+	<script src="js/styleMapGris.js"></script>
+
+	<title>Població Catalunya 2014</title>
+</head>
+
+<body>
+	<div id="titol">
+		<div id="burguer-menu-icon" class="fa fa-chevron-circle-down" aria-hidden="true">
+
+		</div>
+		<span class="panel-header-title">
+    <div id="title">Població de Catalunya</div>
+    <div id="subtitle">Visualització i anàlisi</div>
+  </span>
+
+	</div>
+
+	<div id="div_panel">
+		<div class="panel-content">
+			<ul class="panel-list">
+				<li class="panel-list-item">
+					<div class="panel-item-ull">
+						<div class="div_gr3_estils">
+							<fieldset>
+								<legend>Per gènere:</legend>
+								<div class="form-group ">
+									<button type="button" data="TOTAL" class="btn btn-orange btn-xs activeBT">Total</button>
+								</div>
+								<div class="form-group ">
+									<button type="button" data="DONES" class="btn btn-orange btn-xs">Dones</button>
+								</div>
+								<div class="form-group ">
+									<button type="button" data="HOMES" class="btn btn-orange btn-xs">Homes</button>
+								</div>
+							</fieldset>
+						</div>
+
+							<div class="div_gr3_estils">
+							<fieldset>
+								<legend>Per edats:</legend>
+								<div class="form-group ">
+									<button type="button" data="P_0_14" class="btn btn-orange btn-xs">0-14 anys</button>
+								</div>
+								<div class="form-group ">
+									<button type="button" data="P_15_64" class="btn btn-orange btn-xs">15-64 anys</button>
+								</div>
+								<div class="form-group ">
+									<button type="button" data="P_65_I_MES" class="btn btn-orange btn-xs">65 i +</button>
+								</div>
+							</fieldset>
+						</div>
+							<div class="div_gr3_estils">
+							<fieldset>
+								<legend>Per nacionalitat:</legend>
+								<div class="form-group ">
+									<button type="button" data="P_ESPANYOL" class="btn btn-orange btn-xs">Espanyola</button>
+								</div>
+								<div class="form-group ">
+									<button type="button" data="P_ESTRANGE" class="btn btn-orange btn-xs">Estrangera</button>
+								</div>
+							</fieldset>
+						</div>
+						<div class="div_gr3_estils">
+							<fieldset>
+								<legend>Nascuts a:</legend>
+								<div class="form-group ">
+									<button type="button" data="P_NASC_CAT" class="btn btn-orange btn-xs">Catalunya</button>
+								</div>
+								<div class="form-group ">
+									<button type="button" data="P_NASC_RES" class="btn btn-orange btn-xs">Espanya</button>
+								</div>
+								<div class="form-group ">
+									<button type="button" data="P_NASC_EST" class="btn btn-orange btn-xs">Estranger</button>
+								</div>
+							</fieldset>
+						</div>
+
+					</div>
+				</li>
+				<li class="panel-list-item">
+<div class="panel-item-ull">
+						<div class="div_gr4_estils">
+
+
+
+								<div>
+									<legend>Rangs de població:</legend></div>
+
+								<div id="c_init" class="colorbox"></div>
+
+								<div id="c_end" class="colorbox"></div>
+
+
+
+</div>
+
+					<div class="panel-item-ull">
+						<div id="slider"></div>
+					</div>
+
+				</li>
+
+				<li class="panel-list-item">
+					<hr>
+					<div id="controlbox"></div>
+					<div id="mygrid"></div>
+				</li>
+
+			</ul>
+
+		</div>
+		<div class="panel-footer">
+			<div class="panel-item-ull">
+				<small>
+				<!--
+				<div id="logos_icgc">
+					<a target="_blank" title="Institut Cartogràfic i Geològic de Catalunya" href="http://www.icgc.cat" class="logo_footer">
+          <img height="50" src="css/images/icgc.png">
+        </a>
+			-->
+			<p>Aplicació desenvolupada per <a target="_blank" title="Institut Cartogràfic i Geològic de Catalunya" href="http://www.icgc.cat">ICGC </a>.</p>
+			Font dades <a href='https://www.idescat.cat/cataleg/?tc=c&idp=172' target='_blank'>IDESCAT</a> corresponents al registre
+			 de població de Catalunya (01.01.2014),
+			 representades en una quadrícula multiresolució de 125 m i 250 m
+			</small>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+	<div id='features'>
+		<b>Poblacio 2014</b>
+		<div id='pd'>
+			<p></p>
+		</div>
+	</div>
+
+	<div id='map'></div>
+
+	<div class='map-overlay' id='legend'></div>
+
+	<script src="js/gridpoblacio.js"></script>
+	<script src="/betaserver.google-analytics.js"></script>
+</body>
+
+</html>
