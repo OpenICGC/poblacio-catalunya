@@ -210,7 +210,7 @@ $(document).ready(function() {
 
 function checkUndefined(valor) {
   var _val = valor;
-  valor === undefined ? _val = 0 : _val = '<b>' + valor + '</b>';
+  valor === undefined ? _val = 0 : _val =  valor ;
   return _val;
 }
 
