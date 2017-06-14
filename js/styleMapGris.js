@@ -113,6 +113,7 @@ var styleGris = {
         "id": "normalMaps",
         "type": "normal",
         "source": "normals",
+        "paint": {"normal-opacity": 0.2},
         "minzoom": 13,
         "maxzoom": 16
     },
@@ -121,12 +122,12 @@ var styleGris = {
             "id": "normalMaps0",
             "source": "normals0",
             "type": "normal",
-            //"paint": {"raster-opacity": 0.85},
+            "paint": {"normal-opacity": 0.2},
 			"minzoom": 6,
         "maxzoom": 13
         },
-    */
 
+*/
 	 {
             "id": "water",
             "type": "fill",

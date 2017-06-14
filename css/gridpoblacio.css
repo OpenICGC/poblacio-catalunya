@@ -220,7 +220,7 @@ color:#686868;
 
 #mygrid {
   position: absolute;
-  top: 353px;
+  top: 53px;
   z-index: 1000;
   width: 279px;
   height: auto;
@@ -314,7 +314,7 @@ input:checked+.slider:before {
 padding-bottom: 14px;
   position: inherit;
   width: 100%;
-      bottom: 0px;
+
 }
 
 #logos_icgc {

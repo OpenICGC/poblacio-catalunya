@@ -24,6 +24,9 @@ function initLlocs(container) {
   });
 
   $('#searchboxinput').on('keypress', function(event) {
+    console.info(event);
+    console.info(event.pageX);
+    console.info(event.screenX);
 	  if (event.which == 13) {
     checkInput(true);
     event.preventDefault();
