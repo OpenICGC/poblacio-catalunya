@@ -32,12 +32,14 @@ $(document).ready(function() {
 
 
 
+
+
   mapboxgl.accessToken = 'NOT-REQUIRED-WITH-YOUR-VECTOR-TILES-DATA';
   map = new mapboxgl.Map({
     container: 'map',
     center: [1.2293, 41.1246],
     pitch: 45,
-    hash:true,
+    hash: true,
     bearing: -17.6,
     style: styleGris, //styleBlanc
     zoom: 13
@@ -67,9 +69,6 @@ $(document).ready(function() {
 
   //zoom.setAttribute("class", "control-zoom");
   //controldiv.appendChild(zoom);
-  map.on('moveend', function() {
-  //  zoom.innerHTML = "Nivell zoom: " + parseFloat(map.getZoom()).toFixed(1) + "";
-  });
 
   jQuery('#bt_pitch').on('click', function() {
     var pitch = parseInt(map.getPitch());
@@ -79,6 +78,8 @@ $(document).ready(function() {
     });
 
   });
+
+  dataTable(null);
 
   map.on('load', function() {
 
@@ -169,31 +170,16 @@ $(document).ready(function() {
 
     }, "10100 9 Cap de comarca 8");
 
-    generaLlegendaDinamica(null,null);
+    generaLlegendaDinamica(null, null);
 
     map.on('mousemove', _LAYER_ACTIVE, function(e) {
 
       map.getCanvas().style.cursor = 'pointer';
       var feature = e.features[0];
       var _prop = getActivePropertie(_DEFAULT_CLASS);
-      document.getElementById('pd').innerHTML = "<ul>" +
-        "<li><strong>Per gènere:</strong></li>" +
-        "<li><strong>Per gènere:</strong></li>" +
-        "<li>Total: " + checkUndefined(feature.properties.TOTAL) + "</li>" +
-        "<li>Homes: " + checkUndefined(feature.properties.HOMES) + "</li>" +
-        "<li>Dones: " + checkUndefined(feature.properties.DONES) + "</li>" +
-        "<li><strong>Per edats:</strong></li>" +
-        "<li>0-14 anys: " + checkUndefined(feature.properties.P_0_14) + "</li>" +
-        "<li>15-64 anys: " + checkUndefined(feature.properties.P_15_64) + "</li>" +
-        "<li>65 i +: " + checkUndefined(feature.properties.P_65_I_MES) + "</li>" +
-        "<li><strong>Per nacionalitat:</strong></li>" +
-        "<li>Espanyola: " + checkUndefined(feature.properties.P_ESPANYOL) + "</li>" +
-        "<li>Estrangera: " + checkUndefined(feature.properties.P_ESTRANGE) + "</li>" +
-        "<li><strong>Nascuts a:</strong></li>" +
-        "<li>Catalunya: " + checkUndefined(feature.properties.P_NASC_CAT) + "</li>" +
-        "<li>Espanya: " + checkUndefined(feature.properties.P_NASC_RES) + "</li>" +
-        "<li>Estranger: " + checkUndefined(feature.properties.P_NASC_EST) + "</li>" +
-        "</ul>";
+
+      dataTable(feature);
+
       popup.setLngLat(e.lngLat)
         .setText(feature.properties[_prop])
         .addTo(map);
@@ -201,16 +187,14 @@ $(document).ready(function() {
     });
 
     map.on('click', _LAYER_ACTIVE, function() {
-    $('#features').toggle();
-    });
-    map.on('click', function() {
-    $('#features').hide();
+      //  $('#features').toggle();
     });
 
 
     map.on('mouseleave', _LAYER_ACTIVE, function() {
       map.getCanvas().style.cursor = '';
       popup.remove();
+      dataTable(null);
 
     });
 
@@ -225,18 +209,69 @@ $(document).ready(function() {
 });
 
 function checkUndefined(valor) {
-
-var _val=valor;
-
-  valor === undefined ? _val = 0 : _val='<b>'+valor+'</b>';
-
+  var _val = valor;
+  valor === undefined ? _val = 0 : _val = '<b>' + valor + '</b>';
   return _val;
+}
+
+
+function dataTable(feature) {
+  if (feature) {
+    document.getElementById('taula_dades').innerHTML = "<table style='width:100%'>" +
+      "<tr><th colspan='3'><strong>Per Gènere</strong></th></tr>" +
+      "<tr>" +
+      "<td>Total: " + checkUndefined(feature.properties.TOTAL) + "</td>" +
+      "<td>Homes: " + checkUndefined(feature.properties.HOMES) + "</td>" +
+      "<td>Dones: " + checkUndefined(feature.properties.DONES) + "</td>" +
+      "</tr>" +
+      "<tr><th colspan='3'><strong>Per edats</strong></th></tr>" +
+      "<tr>" +
+      "<td>0-14 anys: " + checkUndefined(feature.properties.P_0_14) + "</td>" +
+      "<td>15-64 anys: " + checkUndefined(feature.properties.P_15_64) + "</td>" +
+      "<td>65 i +: " + checkUndefined(feature.properties.P_65_I_MES) + "</td>" +
+      "</tr>" +
+      "<tr><th colspan='2'><strong>Per nacionalitat:</strong></th></tr>" +
+      "<td>Espanyola: " + checkUndefined(feature.properties.P_ESPANYOL) + "</td>" +
+      "<td>Estrangera: " + checkUndefined(feature.properties.P_ESTRANGE) + "</td>" +
+      "</tr>" +
+      "<tr><th colspan='3'><strong>Nascuts a:</strong></th></tr>" +
+      "<td>Catalunya: " + checkUndefined(feature.properties.P_NASC_CAT) + "</td>" +
+      "<td>Espanya: " + checkUndefined(feature.properties.P_NASC_RES) + "</td>" +
+      "<td>Estranger: " + checkUndefined(feature.properties.P_NASC_EST) + "</td>" +
+      "</tr>" +
+      "</table>";
+  } else {
+    document.getElementById('taula_dades').innerHTML = "<table style='width:100%'>" +
+      "<tr><th colspan='3'><strong>Per Gènere</strong></th></tr>" +
+      "<tr>" +
+      "<td>Total: - </td>" +
+      "<td>Homes: - </td>" +
+      "<td>Dones: - </td>" +
+      "</tr>" +
+      "<tr><th colspan='3'><strong>Per edats</strong></th></tr>" +
+      "<tr>" +
+      "<td>0-14 anys: - </td>" +
+      "<td>15-64 anys: - </td>" +
+      "<td>65 i +: - </td>" +
+      "</tr>" +
+      "<tr><th colspan='2'><strong>Per nacionalitat:</strong></th></tr>" +
+      "<td>Espanyola: - </td>" +
+      "<td>Estrangera: - </td>" +
+      "</tr>" +
+      "<tr><th colspan='3'><strong>Nascuts a:</strong></th></tr>" +
+      "<td>Catalunya: - </td>" +
+      "<td>Espanya: - </td>" +
+      "<td>Estranger: - </td>" +
+      "</tr>" +
+      "</table>";
+
+  }
+
 
 }
 
 
 function changeCSSGradientColors(arrayColors) {
-
 
   $('#noUi-base').css({
     'background-color': arrayColors[0],
@@ -255,78 +290,69 @@ function changeCSSGradientColors(arrayColors) {
 
 var optionsColorPicker = {
   customClass: 'colorpicker-2x',
-
   align: 'left',
   format: 'rgb'
 };
 
 
-function createSlider(){
+function createSlider() {
 
-
-    slider = document.getElementById('slider');
-
-
-
-    noUiSlider.create(slider, {
-      start: [_TOTAL_Array[0], _TOTAL_Array[6]],
-      connect: true,
-      format: {
-        to: function(value) {
-          return parseInt(value).toFixed(0);
-        },
-        from: function(value) {
-          return parseInt(value).toFixed(0);
-        }
+  slider = document.getElementById('slider');
+  noUiSlider.create(slider, {
+    start: [_TOTAL_Array[0], _TOTAL_Array[6]],
+    connect: true,
+    format: {
+      to: function(value) {
+        return parseInt(value).toFixed(0);
       },
-      //tooltips: [ true,null, true ],
-      tooltips: true,
-      range: {
-        'min': _TOTAL_Array[0],
-        'max': _TOTAL_Array[6]
+      from: function(value) {
+        return parseInt(value).toFixed(0);
       }
-    });
+    },
+    //tooltips: [ true,null, true ],
+    tooltips: true,
+    range: {
+      'min': _TOTAL_Array[0],
+      'max': _TOTAL_Array[6]
+    }
+  });
 
 
-    slider.noUiSlider.pips({
-      mode: 'values',
-      values: _TOTAL_Array,
-      density: calculateDesity(_TOTAL_Array[0], _TOTAL_Array[6])
-    });
+  slider.noUiSlider.pips({
+    mode: 'values',
+    values: _TOTAL_Array,
+    density: calculateDesity(_TOTAL_Array[0], _TOTAL_Array[6])
+  });
 
-    slider.noUiSlider.on('slide', function(values, handle) {
-      $('.noUi-tooltip').show();
+  slider.noUiSlider.on('slide', function(values, handle) {
+    $('.noUi-tooltip').show();
 
-      if (map.getZoom() >= 12) {
-        setFilterToMap(values)
-      }
-    });
+    if (map.getZoom() >= 12) {
+      setFilterToMap(values)
+    }
+  });
 
-    slider.noUiSlider.on('change', function(values, handle) {
-      $('.noUi-tooltip').show();
-      if (map.getZoom() < 12) {
-        setFilterToMap(values)
-      }
-    });
+  slider.noUiSlider.on('change', function(values, handle) {
+    $('.noUi-tooltip').show();
+    if (map.getZoom() < 12) {
+      setFilterToMap(values)
+    }
+  });
 
-    slider.noUiSlider.on('end', function(values, handle) {
-      $('.noUi-tooltip').hide();
+  slider.noUiSlider.on('end', function(values, handle) {
+    $('.noUi-tooltip').hide();
 
-    });
+  });
 
 
 }
 
 
 function interaccioHTML() {
-
-
-initLlocs('#controlbox');
-
+  initLlocs('#controlbox');
   $.extend(optionsColorPicker, {
     color: '#ffcc00'
   });
-
 
   $('#c_init').colorpicker(optionsColorPicker).on('changeColor.colorpicker',
     function(event) {
@@ -340,7 +366,6 @@ initLlocs('#controlbox');
 
   $('#c_end').colorpicker(optionsColorPicker).on('changeColor.colorpicker',
     function(event) {
-
       $('#c_end').css('background-color', event.color.toHex());
       arrayColors[5] = event.color.toHex();
       arrayColors = chroma.scale([arrayColors[0], arrayColors[5]]).mode('lch').colors(6);
@@ -355,19 +380,21 @@ initLlocs('#controlbox');
 
   $('#burguer-menu-icon').click(function() {
 
-        if($(this).hasClass('fa-chevron-circle-down')){
-
-        $(this).removeClass('fa-chevron-circle-down');
-        $(this).addClass('fa-chevron-circle-up');
-
-        }else{
-            $(this).removeClass('fa-chevron-circle-up');
-          $(this).addClass('fa-chevron-circle-down');
-
-        }
-        $('.map-overlay').toggle();
+    if ($(this).hasClass('fa-chevron-circle-down')) {
+      $(this).removeClass('fa-chevron-circle-down');
+      $(this).addClass('fa-chevron-circle-up');
+    } else {
+      $(this).removeClass('fa-chevron-circle-up');
+      $(this).addClass('fa-chevron-circle-down');
+    }
+    $('.map-overlay').toggle();
     $('#div_panel').toggle();
   });
+
+
+  if ($(document).height() < 640) {
+    $("#burguer-menu-icon").trigger("click");
+  }
 
   $('.btn-xs').click(function() {
     removeClass(_DEFAULT_CLASS);
@@ -392,12 +419,6 @@ function setFilterToMap(values) {
 }
 
 
-
-
-
-
-
-
 function removeClass(_className) {
   $('.btn-xs').each(function() {
     $(this).removeClass(_className);
@@ -414,23 +435,16 @@ function getActivePropertie(_className) {
       return defaultProperti;
     }
   });
-
   return defaultProperti;
-
 }
 
 
 function calculateDesity(min, max) {
-
   return parseInt(max - min / 6).toFixed(0);
-
-
 }
 
 
 function setValorsSlider(valors) {
-
-
   slider.noUiSlider.updateOptions({
     range: {
       'min': valors[0],
@@ -452,7 +466,7 @@ function setValorsSlider(valors) {
 
 
 
-function generaLlegendaDinamica(_quantiles,titol) {
+function generaLlegendaDinamica(_quantiles, titol) {
 
   var layers = ['0-369', '369-792', '792-1188', '1188-1586', '1586-1981', '1981-2377'];
 
@@ -469,11 +483,13 @@ function generaLlegendaDinamica(_quantiles,titol) {
 
   }
 
-if (titol == null) {titol="Total";}
+  if (titol == null) {
+    titol = "Total";
+  }
 
   legend.innerHTML = "";
   // create legend
-    legend.innerHTML = '<div id="tit_llegenda">'+titol+'</div>';
+  legend.innerHTML = '<div id="tit_llegenda"><b>' + titol + '</b></div>';
   for (i = 0; i < layers.length; i++) {
     var layer = layers[i];
     var color = arrayColors[i];
@@ -507,56 +523,56 @@ function changeLayerProperties(layer, value) {
   };
 
   var values = [];
-  var titol="Total";
+  var titol = "Total";
   switch (value) {
 
     case "HOMES":
       values = _HOMES_Array;
-      titol="Homes";
+      titol = "Homes";
       break;
     case "DONES":
       values = _DONES_Array;
-      titol="Dones";
+      titol = "Dones";
       break;
     case "P_0_14":
       values = _P_0_14_Array;
-      titol="0-14 anys";
+      titol = "0-14 anys";
       break;
     case "P_15_64":
       values = _P_15_64_Array;
-      titol="15-64 anys";
+      titol = "15-64 anys";
       break;
     case "P_65_I_MES":
       values = _P_65_I_MES_Array;
-      titol="65 i més anys";
+      titol = "65 i més anys";
       break;
     case "P_ESPANYOL":
       values = _P_ESPANYOL_Array;
-      titol="Nacionalitat espanyola";
+      titol = "Nacionalitat espanyola";
       break;
     case "P_ESTRANGE":
       values = _P_ESTRANGE_Array;
-      titol="Nacionalitat estrangera";
+      titol = "Nacionalitat estrangera";
       break;
     case "P_NASC_CAT":
       values = _P_NASC_CAT_Array;
-      titol="Nascuts a Catalunya";
+      titol = "Nascuts a Catalunya";
       break;
     case "P_NASC_RES":
       values = _P_NASC_RES_Array;
-        titol="Nascuts a Espanya";
+      titol = "Nascuts a Espanya";
       break;
     case "P_NASC_EST":
       values = _P_NASC_EST_Array;
-        titol="Nascuts a Estranger";
+      titol = "Nascuts a Estranger";
       break;
     default:
-  titol="Total";
+      titol = "Total";
       values = _TOTAL_Array;
 
   }
   style = createStyleFromArray(values, style);
-  generaLlegendaDinamica(values,titol);
+  generaLlegendaDinamica(values, titol);
 
   setValorsSlider(values);
   return style;
@@ -596,16 +612,16 @@ function createStyleFromArray(_quantilesArray, style) {
 function changeLayerColorPaintProperties(data, filter) {
 
   var style = changeLayerProperties(_LAYER_ACTIVE, data);
-  try{
-  map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-color', style.paint["fill-extrusion-color"]);
-  map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-height', style.paint["fill-extrusion-height"]);
+  try {
+    map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-color', style.paint["fill-extrusion-color"]);
+    map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-height', style.paint["fill-extrusion-height"]);
 
-        if (filter) {
-          map.setFilter(_LAYER_ACTIVE, ['>', data, 0]);
-        }
-    }catch(Err){
-
+    if (filter) {
+      map.setFilter(_LAYER_ACTIVE, ['>', data, 0]);
     }
+  } catch (Err) {
+
+  }
   changeCSSGradientColors(arrayColors);
 
 

@@ -311,7 +311,7 @@ input:checked+.slider:before {
 }
 
 .panel-footer {
-  bottom: 1px;
+padding-bottom: 14px;
   position: inherit;
   width: 100%;
 }
@@ -337,14 +337,16 @@ form {
 top: 99px;
 width: 320px;
 float: left;
-height: 480px;
+max-height: 635px;
+height: 70%;
+overflow: auto;
 background: #fff;
 display: block;
 radius: 5px;
 z-index: 5000;
 margin-left: 10px;
 box-shadow: 3px 0px 5px #888888;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 .panel-header {
@@ -645,7 +647,7 @@ small{
 
 hr{
     border-top: 1px solid rgba(255,255,255,.15)!important;
-        margin-bottom: 26px !important;
+        margin-bottom: 0px !important;
   }
 
   .noUi-horizontal {
@@ -681,4 +683,31 @@ hr{
 .div_gr4_estils div, .div_gr3_fons div, .div_gr3_sig div {
     display: inline-block;
 
+}
+#taula_dades{
+  font-size: 0.8em;
+  color: #333;
+  padding-top: 33px;
+  height: 170px;
+}
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td{
+
+  width:33%;
+}
+
+td, th {
+
+    padding: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
