@@ -314,6 +314,7 @@ input:checked+.slider:before {
 padding-bottom: 14px;
   position: inherit;
   width: 100%;
+      bottom: 0px;
 }
 
 #logos_icgc {
@@ -605,18 +606,19 @@ padding-bottom: 3px;
   color: #000000;
 background-color: #ccc;
 border-color: #9d9d9d;
+width: 70px;
 }
 
 .btn-orange:hover {
   color: #000000;
   background-color: #ccc;
-
+width: 70px;
   border-color: #eea236;
 }
 
 .activeBT {
   background-color: #686868 !important;
-  color: white;
+  color: white !important;
 }
 
 .colorbox {
@@ -647,7 +649,8 @@ small{
 
 hr{
     border-top: 1px solid rgba(255,255,255,.15)!important;
-        margin-bottom: 0px !important;
+    margin-bottom: 0px !important;
+    margin-top: 7px!important;
   }
 
   .noUi-horizontal {
@@ -664,6 +667,8 @@ hr{
 }
 
 
+
+
 .div_gr3_estils, .div_gr3_fons, .div_gr3_sig {
     height: 45px;
 
@@ -672,7 +677,7 @@ hr{
 .div_gr3_estils div, .div_gr3_fons div, .div_gr3_sig div {
     display: inline-block;
     height: 100%;
-    width: 77px;
+    width: 73px;
 }
 
 .div_gr4_estils, .div_gr3_fons, .div_gr3_sig {
@@ -703,11 +708,16 @@ td{
   width:33%;
 }
 
+th{
+
+
+}
+
 td, th {
 
     padding: 1px;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #f5f5f5;
 }
