@@ -23,6 +23,8 @@ var _P_NASC_RES_Array = [0, 142, 285, 427, 569, 712, 855];
 var _P_NASC_EST_Array = [0, 241, 482, 723, 964, 1205, 1447];
 var _TOTAL_Array = [0, 369, 792, 1188, 1585, 1981, 2378];
 var _LAYER_ACTIVE = 'poblacio_grid';
+var _LAYER_ACTIVE_SELECTED = 'poblacio_grid_selected';
+var color_selected = "#ffff00";
 var _DEFAULT_CLASS = "activeBT";
 var _DEFAULT_PROPERTI = "TOTAL";
 $(document).ready(function() {
@@ -170,6 +172,58 @@ $(document).ready(function() {
 
     }, "10100 9 Cap de comarca 8");
 
+
+    map.addLayer({
+      'id': _LAYER_ACTIVE_SELECTED,
+      'source': 'vector_layer_',
+      'source-layer': 'rp2014_qtree_level2_ofus_allvar_3857',
+      interactive: true,
+      'type': 'fill-extrusion',
+      "paint": {
+        'fill-extrusion-opacity': .9,
+        "fill-extrusion-color": {
+          "property": _DEFAULT_PROPERTI,
+          "type": "exponential",
+          "stops": [
+
+            [0, color_selected],
+            [369, color_selected],
+            [792, color_selected],
+            [1188, color_selected],
+            [1585, color_selected],
+            [1981, color_selected],
+            [2377, color_selected]
+          ]
+        },
+
+        "fill-extrusion-height": {
+          "property": _DEFAULT_PROPERTI,
+          "type": "exponential",
+          "stops": [
+            [0, 0],
+
+            [369, 369],
+            [792, 792],
+            [1188, 1188],
+            [1585, 1585],
+            [1981, 1981],
+            [2377, 2378],
+          ],
+        }
+
+      },
+      "filter": ["==", _DEFAULT_PROPERTI, ""]
+
+    }, "10100 9 Cap de comarca 8");
+
+
+
+
+
+
+
+
+
     generaLlegendaDinamica(null, null);
 
     map.on('mousemove', _LAYER_ACTIVE, function(e) {
@@ -184,6 +238,12 @@ $(document).ready(function() {
         .setText(feature.properties[_prop])
         .addTo(map);
 
+
+
+      if (map.getZoom() >= 12) {
+        map.setFilter(_LAYER_ACTIVE_SELECTED, ['==', "ID", feature.properties.ID]);
+      }
+
     });
 
     map.on('click', _LAYER_ACTIVE, function() {
@@ -195,22 +255,22 @@ $(document).ready(function() {
       map.getCanvas().style.cursor = '';
       popup.remove();
       dataTable(null);
+      if (map.getZoom() >= 11) {
+        map.setFilter(_LAYER_ACTIVE_SELECTED, ['==', "ID", ""]);
+      }
 
     });
 
   });
 
-
-
   createSlider();
   interaccioHTML();
-
 
 });
 
 function checkUndefined(valor) {
   var _val = valor;
-  valor === undefined ? _val = 0 : _val =  valor ;
+  valor === undefined ? _val = 0 : _val = valor;
   return _val;
 }
 

@@ -91,8 +91,8 @@ width: 115px;
   margin: 10px;
   padding-top: 10px;
   background-color: white;
-  box-shadow: 3px 0px 5px #888888;
-      opacity: 0.9;
+
+      opacity: 0.93;
 }
 
 #title {
@@ -335,19 +335,18 @@ form {
 
 #div_panel {
   position: absolute;
-top: 99px;
+top: 98px;
 width: 320px;
 float: left;
-max-height: 646px;
-height: 70%;
+max-height: 71%;
+height: 75%;
 overflow: auto;
 background: #fff;
 display: block;
 radius: 5px;
 z-index: 5000;
 margin-left: 10px;
-box-shadow: 3px 0px 5px #888888;
-    opacity: 0.95;
+    opacity: 0.92;
 }
 
 .panel-header {
