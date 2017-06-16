@@ -453,7 +453,8 @@ function interaccioHTML() {
     $('#titol').css('width','90%');
     } else {
 
-
+      $(this).removeClass('fa-chevron-circle-up');
+           $(this).addClass('fa-chevron-circle-down');
       $('.social_out').hide();
       $('.social_in').show();
       $('#titol').css('width','100%');
