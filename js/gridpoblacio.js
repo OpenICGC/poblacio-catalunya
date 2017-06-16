@@ -46,6 +46,8 @@ $(document).ready(function() {
     style: styleGris, //styleBlanc
     zoom: 13
   });
+
+  map.setMaxZoom(14.45);
   map.addControl(new mapboxgl.NavigationControl());
   var setCenterFromLayer = true;
   /*
@@ -172,7 +174,7 @@ $(document).ready(function() {
 
     }, "10100 9 Cap de comarca 8");
 
-
+/*
     map.addLayer({
       'id': _LAYER_ACTIVE_SELECTED,
       'source': 'vector_layer_',
@@ -218,7 +220,7 @@ $(document).ready(function() {
 
 
 
-
+*/
 
 
 
@@ -239,11 +241,11 @@ $(document).ready(function() {
         .addTo(map);
 
 
-
+/*
       if (map.getZoom() >= 12) {
         map.setFilter(_LAYER_ACTIVE_SELECTED, ['==', "ID", feature.properties.ID]);
       }
-
+*/
     });
 
     map.on('click', _LAYER_ACTIVE, function() {
@@ -255,9 +257,11 @@ $(document).ready(function() {
       map.getCanvas().style.cursor = '';
       popup.remove();
       dataTable(null);
+      /*
       if (map.getZoom() >= 11) {
         map.setFilter(_LAYER_ACTIVE_SELECTED, ['==', "ID", ""]);
       }
+      */
 
     });
 
@@ -440,16 +444,45 @@ function interaccioHTML() {
 
   $('#burguer-menu-icon').click(function() {
 
-    if ($(this).hasClass('fa-chevron-circle-down')) {
+    if ($(this).hasClass('fa-chevron-circle-down')) { //obert
       $(this).removeClass('fa-chevron-circle-down');
       $(this).addClass('fa-chevron-circle-up');
+      console.info($('#social'));
+      $('.social_in').hide();
+      $('.social_out').show();
+    $('#titol').css('width','90%');
     } else {
-      $(this).removeClass('fa-chevron-circle-up');
-      $(this).addClass('fa-chevron-circle-down');
+
+
+      $('.social_out').hide();
+      $('.social_in').show();
+      $('#titol').css('width','100%');
     }
     $('.map-overlay').toggle();
-    $('#div_panel').toggle();
+    $('#div_panel_body').toggle();
+    $('.panel-footer').toggle();
+
+
+
   });
+
+
+
+  $('#bt_vincle').on('click',function(){
+     var currentURL = window.location;
+     $('#urlMap').val(currentURL);
+     var iframecode = '<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'+currentURL+'" ></iframe>';
+     $('#iframeMap').html(iframecode);
+     $('#enllacamodal').modal('show');
+   });
+
+
+   //$(document).hotkeys('alt+ctrl+j', 'alt+ctrl+m', function(){
+   $(document).bind('keydown', 'alt+ctrl+m', function(){
+      map.flyTo({center: [1.7662, 41.3019], zoom:13.43});
+    //  $('#alertmodal .alertmodal-body').html("Ups!! que està passant aqui? <i class='fa fa-comment-o' aria-hidden='true'></i>");
+    //  $('#alertmodal').modal('show');
+    });
 
 
   if ($(document).height() < 640) {
@@ -466,6 +499,14 @@ function interaccioHTML() {
 
   $('div.noUi-base').prop('id', 'noUi-base');
   changeCSSGradientColors(arrayColors);
+
+
+  jQuery('#bt_capture').on('click', function() {
+    $('#md_print').modal({
+      show : true
+    });
+  });
+
 }
 
 
