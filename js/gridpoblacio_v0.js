@@ -11,7 +11,6 @@ var id_ = 'rp2014_qtree_level2_ofus_allvar_3857';
 var layers_ = [];
 var slider;
 var arrayColors = ['#FFD400', '#FFA344', '#EF5122', '#CB5726', '#CF1020', '#8A171A'];
-var arrayFilters = [0, 2378];
 var _HOMES_Array = [0, 211, 422, 633, 844, 1055, 1267];
 var _DONES_Array = [0, 191, 382, 572, 763, 954, 1146];
 var _P_0_14_Array = [0, 88, 176, 264, 353, 441, 530];
@@ -28,42 +27,11 @@ var _LAYER_ACTIVE_SELECTED = 'poblacio_grid_selected';
 var color_selected = "#ffff00";
 var _DEFAULT_CLASS = "activeBT";
 var _DEFAULT_PROPERTI = "TOTAL";
-var objApp = {};
-var arrayXYZPB = [1.2293, 41.1246, 13, 45, -17.6];
 $(document).ready(function() {
 
   //arrayColors = chroma.scale(['#FFD400', '#cc0000']).mode('lch').colors(6);
   arrayColors = chroma.scale(['#EFD905', '#7700ff']).mode('lch').colors(6);
-  arrayValues = _TOTAL_Array;
 
-
-
-  if ($.url('?XYZPB')) {
-    try {
-      arrayXYZPB = $.url('?XYZPB').split(",");
-      console.info(arrayXYZPB);
-    } catch (err) {}
-  }
-
-
-  console.info($.url('?COLORS'));
-  if ($.url('?COLORS')) {
-    try {
-      var _cc = $.url('?COLORS').split(",");
-      console.info(_cc);
-      arrayColors = chroma.scale(["#" + _cc[0], "#" + _cc[1]]).mode('lch').colors(6);
-    } catch (err) {
-      console.info(err);
-    }
-  }
-
-  if ($.url('?FILTERS')) {
-    try {
-      arrayFilters = $.url('?FILTERS').split(",");
-    } catch (err) {
-      console.info(err);
-    }
-  }
 
 
 
@@ -71,12 +39,12 @@ $(document).ready(function() {
   mapboxgl.accessToken = 'NOT-REQUIRED-WITH-YOUR-VECTOR-TILES-DATA';
   map = new mapboxgl.Map({
     container: 'map',
-    center: [arrayXYZPB[0], arrayXYZPB[1]],
-    pitch: arrayXYZPB[3],
-    hash: false,
-    bearing: arrayXYZPB[4],
+    center: [1.2293, 41.1246],
+    pitch: 45,
+    hash: true,
+    bearing: -17.6,
     style: styleGris, //styleBlanc
-    zoom: arrayXYZPB[2]
+    zoom: 13
   });
 
   map.setMaxZoom(14.45);
@@ -118,7 +86,6 @@ $(document).ready(function() {
   dataTable(null);
 
   map.on('load', function() {
-
 
     map.getCanvas().style.cursor = 'default'
 
@@ -207,7 +174,53 @@ $(document).ready(function() {
 
     }, "10100 9 Cap de comarca 8");
 
+    /*
+        map.addLayer({
+          'id': _LAYER_ACTIVE_SELECTED,
+          'source': 'vector_layer_',
+          'source-layer': 'rp2014_qtree_level2_ofus_allvar_3857',
+          interactive: true,
+          'type': 'fill-extrusion',
+          "paint": {
+            'fill-extrusion-opacity': .9,
+            "fill-extrusion-color": {
+              "property": _DEFAULT_PROPERTI,
+              "type": "exponential",
+              "stops": [
 
+                [0, color_selected],
+                [369, color_selected],
+                [792, color_selected],
+                [1188, color_selected],
+                [1585, color_selected],
+                [1981, color_selected],
+                [2377, color_selected]
+              ]
+            },
+
+            "fill-extrusion-height": {
+              "property": _DEFAULT_PROPERTI,
+              "type": "exponential",
+              "stops": [
+                [0, 0],
+
+                [369, 369],
+                [792, 792],
+                [1188, 1188],
+                [1585, 1585],
+                [1981, 1981],
+                [2377, 2378],
+              ],
+            }
+
+          },
+          "filter": ["==", _DEFAULT_PROPERTI, ""]
+
+        }, "10100 9 Cap de comarca 8");
+
+
+
+    */
 
 
 
@@ -227,6 +240,12 @@ $(document).ready(function() {
         .setText(feature.properties[_prop])
         .addTo(map);
 
+
+      /*
+            if (map.getZoom() >= 12) {
+              map.setFilter(_LAYER_ACTIVE_SELECTED, ['==', "ID", feature.properties.ID]);
+            }
+      */
     });
 
     map.on('click', _LAYER_ACTIVE, function() {
@@ -246,33 +265,10 @@ $(document).ready(function() {
 
     });
 
-    if ($.url('?PROP')) {
-      try {
-        _DEFAULT_PROPERTI = $.url('?PROP');
-        setActivePropertie(_DEFAULT_PROPERTI)
-      } catch (err) {
-        console.info(err);
-      }
-    }
-    if ($.url('?FILTERS')) {
-      try {
-        arrayFilters = $.url('?FILTERS').split(",");
-        updateSliderLimits(arrayFilters);
-      } catch (err) {}
-    }
-
   });
 
-  createSlider(arrayValues);
+  createSlider();
   interaccioHTML();
-
-
-
-
-
-
-
-
 
 });
 
@@ -363,11 +359,11 @@ var optionsColorPicker = {
 };
 
 
-function createSlider(arrayValues) {
+function createSlider() {
 
   slider = document.getElementById('slider');
   noUiSlider.create(slider, {
-    start: [arrayValues[0], arrayValues[6]],
+    start: [_TOTAL_Array[0], _TOTAL_Array[6]],
     connect: true,
     format: {
       to: function(value) {
@@ -380,16 +376,16 @@ function createSlider(arrayValues) {
     //tooltips: [ true,null, true ],
     tooltips: true,
     range: {
-      'min': arrayValues[0],
-      'max': arrayValues[6]
+      'min': _TOTAL_Array[0],
+      'max': _TOTAL_Array[6]
     }
   });
 
 
   slider.noUiSlider.pips({
     mode: 'values',
-    values: arrayValues,
-    density: calculateDesity(arrayValues[0], arrayValues[6])
+    values: _TOTAL_Array,
+    density: calculateDesity(_TOTAL_Array[0], _TOTAL_Array[6])
   });
 
   slider.noUiSlider.on('slide', function(values, handle) {
@@ -427,7 +423,6 @@ function interaccioHTML() {
       $('#c_init').css('background-color', event.color.toHex());
       arrayColors[0] = event.color.toHex();
       arrayColors = chroma.scale([arrayColors[0], arrayColors[5]]).mode('lch').colors(6);
-
       changeLayerColorPaintProperties(getActivePropertie(_DEFAULT_CLASS), false);
 
     });
@@ -475,15 +470,7 @@ function interaccioHTML() {
 
 
   $('#bt_vincle').on('click', function() {
-
-    var temaActiu = getActivePropertie(_DEFAULT_CLASS);
-
-    var params = "?XYZPB=" + map.getCenter().lng.toFixed(6) + "," + map.getCenter().lat.toFixed(6) + "," + map.getZoom().toFixed(0) + "," + map.getPitch().toFixed(1) + "," + map.getBearing().toFixed(1) +
-      "&PROP=" + temaActiu +
-      "&COLORS=" + arrayColors[0].replace('#', '') + "," + arrayColors[5].replace('#', '') +
-      "&FILTERS=" + arrayFilters[0] + "," + arrayFilters[1] + "&";
-    var currentURL = "http://" + $.url('hostname') + $.url('path') + params;
-
+    var currentURL = window.location;
     $('#urlMap').val(currentURL);
     var iframecode = '<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="' + currentURL + '" ></iframe>';
     $('#iframeMap').html(iframecode);
@@ -510,7 +497,9 @@ function interaccioHTML() {
   $('.btn-xs').click(function() {
     removeClass(_DEFAULT_CLASS);
     $(this).addClass(_DEFAULT_CLASS);
+
     changeLayerColorPaintProperties($(this).attr('data'), true);
+
   });
 
   $('div.noUi-base').prop('id', 'noUi-base');
@@ -528,10 +517,7 @@ function interaccioHTML() {
 
 function setFilterToMap(values) {
 
-  arrayFilters[0] = parseInt(values[0]);
-  arrayFilters[1] = parseInt(values[1]);
   var _prop = getActivePropertie(_DEFAULT_CLASS);
-
   map.setFilter(_LAYER_ACTIVE, ["all", [">", _prop, parseInt(values[0])],
     ["<", _prop, parseInt(values[1])]
   ]);
@@ -559,25 +545,6 @@ function getActivePropertie(_className) {
 }
 
 
-function setActivePropertie(PROP) {
-
-  $('.btn-xs').each(function() {
-    var po = $(this).attr('data');
-
-    if (po == PROP) {
-      removeClass(_DEFAULT_CLASS);
-      $(this).addClass(_DEFAULT_CLASS);
-      changeLayerColorPaintProperties(PROP, null);
-
-    }
-
-
-  });
-
-}
-
-
-
 function calculateDesity(min, max) {
   return parseInt(max - min / 6).toFixed(0);
 }
@@ -602,12 +569,7 @@ function setValorsSlider(valors) {
 }
 
 
-function updateSliderLimits(valors) {
 
-  slider.noUiSlider.set([valors[0], valors[1]]);
-  setFilterToMap(valors);
-
-}
 
 
 function generaLlegendaDinamica(_quantiles, titol) {
