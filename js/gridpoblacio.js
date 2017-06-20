@@ -373,7 +373,7 @@ initLlocs('#controlbox');
     removeClass(_DEFAULT_CLASS);
     $(this).addClass(_DEFAULT_CLASS);
 
-    changeLayerColorPaintProperties($(this).attr('data'), true);
+    changeLayerColorPaintProperties($(this).attr('data'), true, true);
 
   });
 
@@ -593,21 +593,94 @@ function createStyleFromArray(_quantilesArray, style) {
 
 }
 
-function changeLayerColorPaintProperties(data, filter) {
+var destHeight = {};
+var currentHeight = {};
+var startHeight = {};
+var start = null;
+var duration = 2000;
+var animProgress = 0;
+
+function changeLayerColorPaintProperties(data, filter, anim) {
+
+  var animate = anim || false;
 
   var style = changeLayerProperties(_LAYER_ACTIVE, data);
+
+  if(animate) {
+
+    startHeight = $.extend( true, startHeight, destHeight );
+    currentHeight = $.extend( true, currentHeight, startHeight );
+    destHeight = style.paint["fill-extrusion-height"];
+    currentHeight.property = destHeight.property;
+
+    if(null != startHeight && null != destHeight)
+      console.log("Start: " + startHeight.stops[6][0] + " Dest: " + destHeight.stops[6][0]);
+
+  }
+
   try{
-  map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-color', style.paint["fill-extrusion-color"]);
-  map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-height', style.paint["fill-extrusion-height"]);
 
-        if (filter) {
-          map.setFilter(_LAYER_ACTIVE, ['>', data, 0]);
-        }
-    }catch(Err){
-
+    if(!animate) {
+      var style = style.paint["fill-extrusion-height"];
+      startHeight = style;
+      destHeight = $.extend( true, destHeight, startHeight );
+      currentHeight = $.extend( true, currentHeight, startHeight );
+      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-height', style);
     }
+    map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-color', style.paint["fill-extrusion-color"]);
+    
+    if (filter) {
+      map.setFilter(_LAYER_ACTIVE, ['>', data, 0]);
+    }
+
+  }
+  catch(Err){
+
+  }
+
   changeCSSGradientColors(arrayColors);
 
+  if(animate) {
+  
+    start = performance.now();
+    window.requestAnimationFrame(animateExtrusion);
+
+  }
+
+}
+
+function animateExtrusion(timestamp) {
+
+  var span = performance.now() - start;
+  animProgress = span/duration;
+  if(animProgress > 1.0) {
+    animProgress = 1.0;
+  }
+
+  for(var i=1, len=destHeight.stops.length; i<len; ++i) {
+    
+    var val = Math.round(startHeight.stops[i][0] + (destHeight.stops[i][0] - startHeight.stops[i][0])*animProgress);
+    currentHeight.stops[i][0] = val;
+    currentHeight.stops[i][1] = val;
+
+  }
+
+
+  try {
+
+    map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-height', currentHeight);
+
+  }
+  catch(Err) {
+
+  }
+
+  if(animProgress < 1.0)
+  {
+
+    window.requestAnimationFrame(animateExtrusion);
+
+  }
 
 }
 
