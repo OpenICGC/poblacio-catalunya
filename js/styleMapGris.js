@@ -6,7 +6,9 @@ var urlApp = document.location.href;
 if (urlApp.indexOf('172.70.1.31') != -1) {
   serverName = "172.70.1.31";
 }
-
+if (urlApp.indexOf('localhost') != -1) {
+  serverName = "localhost";
+}
 
 
 
@@ -21,14 +23,7 @@ var styleGris = {
             "maxzoom": 15,
             "attribution": "Mapa: <a href='http://www.icgc.cat'>Institut Cartogràfic i Geològic de Catalunya</a>"
         },
-        "mtc25mtopon": {
-            "type": "raster",
-            "tiles": [
-                "http://"+serverName+"/tileserver3/tileserver.php/mtc25mgdb_topon_r/{z}/{x}/{y}.png"
-            ],
-            "maxzoom": 16,
-            "attribution": "Mapa : <a href='http://www.icgc.cat'>Institut Cartogràfic i Geològic de Catalunya</a>"
-        },
+
 		"codiscarr25m": {
             "type": "vector",
             "tiles": [
@@ -58,28 +53,8 @@ var styleGris = {
             "type": "vector",
             "tiles": ["https://tile.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.mvt?api_key=vector-tiles-LM25tq4"]
         },
-        "normals0": {
-            "type": "raster",
-            "tiles": [
-                "http://"+serverName+"/tileserver3/tileserver.php?/normal6-12_v3/{z}/{x}/{y}.png"
-                //"http://"+serverName+"/vectortiles/img/normal.jpg"
-            ],
-            "maxzoom": 13,
-
-            "attribution": "Mapa : <a href='http://www.icgc.cat'>Institut Cartogràfic i Geològic de Catalunya</a>"
-        },
 
 
-        "normals": {
-            "type": "raster",
-            "tiles": [
-                "http://"+serverName+"/tileserver3/tileserver.php?/norm2x2/{z}/{x}/{y}.png"
-                //"http://"+serverName+"/vectortiles/img/normal.jpg"
-            ],
-            "maxzoom": 16,
-
-            "attribution": "Mapa : <a href='http://www.icgc.cat'>Institut Cartogràfic i Geològic de Catalunya</a>"
-        }
     },
       "light": {
         "anchor": "viewport",
@@ -108,24 +83,6 @@ var styleGris = {
     "background-color": "#323E3F",
   }
 },
-/*
-{
-        "id": "normalMaps",
-        "type": "normal",
-        "source": "normals",
-        "minzoom": 13,
-        "maxzoom": 16
-    },
-
-	{
-            "id": "normalMaps0",
-            "source": "normals0",
-            "type": "normal",
-            //"paint": {"raster-opacity": 0.85},
-			"minzoom": 6,
-        "maxzoom": 13
-        },
-    */
 
 	 {
             "id": "water",
