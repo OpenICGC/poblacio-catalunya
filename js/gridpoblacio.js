@@ -422,6 +422,9 @@ function interaccioHTML() {
     color: '#ffcc00'
   });
 
+
+
+
   $('#c_init').colorpicker(optionsColorPicker).on('changeColor.colorpicker',
     function(event) {
       $('#c_init').css('background-color', event.color.toHex());
@@ -446,6 +449,20 @@ function interaccioHTML() {
   $('#c_init').css('background-color', arrayColors[0]);
   $('#c_end').colorpicker('setValue', arrayColors[5]);
   $('#c_end').css('background-color', arrayColors[5]);
+
+
+    $('#ull_capa').click(function() {
+          if ($(this).hasClass('fa-eye')) { //obert
+                $(this).removeClass('fa-eye');
+                $(this).addClass('fa-eye-slash');              
+                  map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-opacity', 0);
+            }else{
+                $(this).addClass('fa-eye');
+                $(this).removeClass('fa-eye-slash');
+                  map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-opacity', .9);
+            }
+
+    });
 
   $('#burguer-menu-icon').click(function() {
 
@@ -649,6 +666,8 @@ function generaLlegendaDinamica(_quantiles, titol) {
   }
 
 }
+
+
 
 function changeLayerProperties(layer, value) {
 

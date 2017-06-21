@@ -20,7 +20,7 @@ var styleGris = {
             "tiles": [
                 "http://"+serverName+"/tileserver3/tileserver.php/mtc25mcomplet/{z}/{x}/{y}.pbf"
             ],
-            "maxzoom": 15,
+            "maxzoom": 16,
             "attribution": "Mapa: <a href='http://www.icgc.cat'>Institut Cartogràfic i Geològic de Catalunya</a>"
         },
 
@@ -46,7 +46,7 @@ var styleGris = {
             "tiles": [
                 "http://"+serverName+"/tileserver3/tileserver.php/redtopo/{z}/{x}/{y}.pbf"
             ],
-            "maxzoom": 15,
+            "maxzoom": 16,
             "attribution": "Mapa : <a href='http://www.icgc.cat'>Institut Cartogràfic i Geològic de Catalunya</a>"
         },
         "osm": {
@@ -2599,7 +2599,7 @@ var styleGris = {
     },
     "source": "mtc25mgdb",
     "source-layer": "corba_de_nivell_mestra_0_lin",
-    "minzoom": 14,
+  "minzoom": 12,
     "maxzoom": 16
 },{
     "interactive": true,
@@ -34681,1007 +34681,22681 @@ var styleGris = {
     "minzoom": 11,
     "maxzoom": 16
 },
-//*********************************FINAL LINIES*********************************
-
-//*************************INICI TOPONIMIA MTC25M RASTER***********************
-/*	{
-        "id": "mtc25mtopon",
-        "type": "raster",
-        "source": "mtc25mtopon",
+///INICI toponimia
+//*********************************INICI TOPONIMIA*********************************
+    {
+        "id": "10100 9 Cap de comarca 7",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level7",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10100"
+            ]
+        ],
+        "minzoom": 7,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Bold"
+            ],
+            "text-size": 12,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10100 9 Cap de comarca 8",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level8",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10100"
+            ]
+        ],
+        "minzoom": 8,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Bold"
+            ],
+            "text-size": 13,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10100 9 Cap de comarca 9",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level9",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10100"
+            ]
+        ],
+        "minzoom": 9,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Bold"
+            ],
+            "text-size": 14,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51004 7 Delta 9",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level9",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51004"
+            ]
+        ],
+        "minzoom": 9,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10000 9 Cap de municipi 10",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level10",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10000"
+            ]
+        ],
+        "minzoom": 10,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10100 9 Cap de comarca 10",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level10",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10100"
+            ]
+        ],
+        "minzoom": 10,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Bold"
+            ],
+            "text-size": 15,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50101 1 Massís  muntanyes 10",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level10",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50101"
+            ]
+        ],
+        "minzoom": 10,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51004 7 Delta 10",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level10",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51004"
+            ]
+        ],
+        "minzoom": 10,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "00001 17 Municipi 11",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level11",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "00001"
+            ]
+        ],
+        "minzoom": 11,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10000 9 Cap de municipi 11",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level11",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10000"
+            ]
+        ],
+        "minzoom": 11,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 13,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10100 9 Cap de comarca 11",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level11",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10100"
+            ]
+        ],
+        "minzoom": 11,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Bold"
+            ],
+            "text-size": 16,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50101 1 Massís  muntanyes 11",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level11",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50101"
+            ]
+        ],
+        "minzoom": 11,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51001 7 Arxipèlag 11",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level11",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51001"
+            ]
+        ],
+        "minzoom": 11,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51004 7 Delta 11",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level11",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51004"
+            ]
+        ],
+        "minzoom": 11,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 16,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60301 5 Riu 11",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level11",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60301"
+            ]
+        ],
+        "minzoom": 11,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "00001 17 Municipi 12",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level12",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "00001"
+            ]
+        ],
+        "minzoom": 12,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10000 9 Cap de municipi 12",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level12",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10000"
+            ]
+        ],
+        "minzoom": 12,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10100 9 Cap de comarca 12",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level12",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10100"
+            ]
+        ],
+        "minzoom": 12,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Bold"
+            ],
+            "text-size": 17,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50101 1 Massís  muntanyes 12",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level12",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50101"
+            ]
+        ],
+        "minzoom": 12,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 17,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50102 1 Serra  serralada  serrat  carena 12",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level12",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50102"
+            ]
+        ],
+        "minzoom": 12,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51001 7 Arxipèlag 12",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level12",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51001"
+            ]
+        ],
+        "minzoom": 12,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51004 7 Delta 12",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level12",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51004"
+            ]
+        ],
+        "minzoom": 12,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 17,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60103 6 Golf  badia 12",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level12",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60103"
+            ]
+        ],
+        "minzoom": 12,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60109 6 Mar 12",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level12",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60109"
+            ]
+        ],
+        "minzoom": 12,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 14,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60203 6 Embassament  pantà 12",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level12",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60203"
+            ]
+        ],
+        "minzoom": 12,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60301 5 Riu 12",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level12",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60301"
+            ]
+        ],
+        "minzoom": 12,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 13,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "00001 17 Municipi 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "00001"
+            ]
+        ],
         "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10000 9 Cap de municipi 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10000"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 15,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10100 9 Cap de comarca 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10100"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Bold"
+            ],
+            "text-size": 18,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10104 10 Poble  llogaret 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10104"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10106 10 Veïnat  raval  barri (aïllat) 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10106"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10201 11 Barri  barriada  raval (part d'un nucli urbà) 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10201"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30201 15 Aeroport 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30201"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40824 13 Parc Nacional 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40824"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40825 13 Parc Natural 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40825"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50101 1 Massís  muntanyes 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50101"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50102 1 Serra  serralada  serrat  carena 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50102"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 16,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50104 1 Altiplà 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50104"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50301 2 Circ 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50301"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50305 2 Vall  conca 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50305"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51001 7 Arxipèlag 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51001"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 17,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51004 7 Delta 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51004"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60103 6 Golf  badia 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60103"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60109 6 Mar 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60109"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 20,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60203 6 Embassament  pantà 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60203"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60301 5 Riu 13",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level13",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60301"
+            ]
+        ],
+        "minzoom": 13,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10000 9 Cap de municipi 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10000"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 16,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10100 9 Cap de comarca 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10100"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Bold"
+            ],
+            "text-size": 18,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10102 10 Caseria 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10102"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10103 10 Colònia 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10103"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10104 10 Poble  llogaret 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10104"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10105 10 Urbanització 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10105"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10106 10 Veïnat  raval  barri (aïllat) 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10106"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10201 11 Barri  barriada  raval (part d'un nucli urbà) 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10201"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 15,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30201 15 Aeroport 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30201"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 15,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30305 8 Línia de ferri 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30305"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30401 8 Ferrocarril 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30401"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30402 8 Cremallera 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30402"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30403 8 Funicular 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30403"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30404 8 Telefèric 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30404"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30502 8 Autovia 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30502"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30503 8 Carretera local 1  cruïlla de carreteres  de camins  pista 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30503"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30504 8 Carretera local 2 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30504"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30505 8 Carretera local 3 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30505"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30506 8 Carretera nacional 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30506"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40701 14 Abadia  monestir  priorat  cartoixa 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40701"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40824 13 Parc Nacional 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40824"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40825 13 Parc Natural 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40825"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40826 13 Altres espais protegits (Parc  paratge  reserva  espai PEIN) 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40826"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40827 13 Espai protegit marí 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40827"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50101 1 Massís  muntanyes 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50101"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 20,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50102 1 Serra  serralada  serrat  carena 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50102"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50104 1 Altiplà 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50104"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50201 1 Agulla 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50201"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50203 1 Bony  cap  cim  penya  pic  puig  punta  roc  tuc  tuca  muntanya 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50203"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50301 2 Circ 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50301"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50302 2 Coll  collada  port 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50302"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50303 2 Coma 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50303"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50305 2 Vall  conca 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50305"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50306 2 Congost  afrau  estret  forat 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50306"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50401 2 Grau  pas 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50401"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50501 3 Balç  cinglera  espadat 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50501"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50601 3 Ras  rasos 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50601"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50602 3 Pla  plana 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50602"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51001 7 Arxipèlag 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51001"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51002 7 Cap  punta 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51002"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51003 7 Costa 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51003"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51004 7 Delta 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51004"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 20,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51007 7 Illa  illot 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51007"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51011 7 Península 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51011"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60101 6 Albufera 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60101"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60102 6 Aiguamoll  maresma  zona pantanosa 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60102"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60103 6 Golf  badia 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60103"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 17,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60104 6 Cala 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60104"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60105 6 Llac  estany  ivó  llacuna 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60105"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60203 6 Embassament  pantà 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60203"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 16,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60301 5 Riu 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60301"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 16,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60302 5 Riera  rambla  rial 14",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level14",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60302"
+            ]
+        ],
+        "minzoom": 14,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10000 9 Cap de municipi 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10000"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 18,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10102 10 Caseria 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10102"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10103 10 Colònia 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10103"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10104 10 Poble  llogaret 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10104"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 15,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10105 10 Urbanització 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10105"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 15,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10106 10 Veïnat  raval  barri (aïllat) 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10106"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 15,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10201 11 Barri  barriada  raval (part d'un nucli urbà) 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10201"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 16,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10202 11 Carrer  avinguda  passeig 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10202"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Condensed Light"
+            ],
+            "text-size": 10,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "20101 12 Central hidroelèctrica 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20101"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "20102 12 Central nuclear 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20102"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "20104 12 Parc eòlic 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20104"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30201 15 Aeroport 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30201"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 16,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30202 15 Aeròdrom 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30202"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30305 8 Línia de ferri 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30305"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30401 8 Ferrocarril 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30401"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30402 8 Cremallera 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30402"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30403 8 Funicular 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30403"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30404 8 Telefèric 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30404"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30405 8 Monorail 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30405"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30406 8 Tramvia 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30406"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30501 8 Xarxa bàsica no Generalitat. Autopista 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30501"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30502 8 Autovia 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30502"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30503 8 Carretera local 1  cruïlla de carreteres  de camins  pista 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30503"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30504 8 Carretera local 2 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30504"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30505 8 Carretera local 3 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30505"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30506 8 Carretera nacional 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30506"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30507 8 Camí  corriol  tallafocs  tomb  boga  revolt 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30507"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30508 8 Carrerada  cabanera 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30508"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30511 8 Pista 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30511"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40302 13 Cementiri  fossar 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40302"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40401 14 Castell  ciutadella  força 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40401"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40413 14 Lloc o indret històric 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40413"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40414 14 Ciutat històrica (en ruïnes) 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40414"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40508 13 Universitat 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40508"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40602 13 Ciutat sanitària 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40602"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40603 13 Balneari 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40603"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40701 14 Abadia  monestir  priorat  cartoixa 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40701"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 13,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40806 13 Camp d'esports 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40806"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40824 13 Parc Nacional 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40824"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 17,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40825 13 Parc Natural 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40825"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 17,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40826 13 Altres espais protegits (Parc  paratge  reserva  espai PEIN) 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40826"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 16,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "40827 13 Espai protegit marí 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40827"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 16,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50102 1 Serra  serralada  serrat  carena 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50102"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 20,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50104 1 Altiplà 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50104"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50201 1 Agulla 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50201"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50203 1 Bony  cap  cim  penya  pic  puig  punta  roc  tuc  tuca  muntanya 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50203"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50204 1 Con volcànic 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50204"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50301 2 Circ 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50301"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50302 2 Coll  collada  port 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50302"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50303 2 Coma 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50303"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50304 2 Clot  fondo  rasa  sot 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50304"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50305 2 Vall  conca 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50305"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50306 2 Congost  afrau  estret  forat 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50306"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50401 2 Grau  pas 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50401"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50501 3 Balç  cinglera  espadat 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50501"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50502 3 Penya-segat 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50502"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50601 3 Ras  rasos 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50601"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50602 3 Pla  plana 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50602"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50701 3 Costa  falda  pala 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50701"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50902 4 Bosc 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50902"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50903 4 Bac  baga  obac  obaga 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50903"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51001 7 Arxipèlag 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51001"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 20,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51002 7 Cap  punta 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51002"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51003 7 Costa 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51003"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51007 7 Illa  illot 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51007"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51008 7 Platja  platjola 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51008"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51009 7 Port natural 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51009"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51011 7 Península 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51011"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51012 7 Istme 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51012"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60101 6 Albufera 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60101"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60102 6 Aiguamoll  maresma  zona pantanosa 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60102"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 15,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60103 6 Golf  badia 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60103"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60104 6 Cala 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60104"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 13,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60105 6 Llac  estany  ivó  llacuna 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60105"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60203 6 Embassament  pantà 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60203"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 17,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60301 5 Riu 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60301"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 17,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60302 5 Riera  rambla  rial 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60302"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 14,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60303 5 Torrent  barranc  rasa  fondo  reguer  sot  canal 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60303"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 13,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60304 5 Salt  saltant  cascada 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60304"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60305 5 Font  bullidor  deu 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60305"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60306 5 Guèiser  pou artesià 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60306"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60401 5 Canal 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60401"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60402 5 Séquia  rec 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60402"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 12,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60403 5 Tub  canonada 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60403"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60404 5 Claveguera  desaigüe  desguàs 15",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level15",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60404"
+            ]
+        ],
+        "minzoom": 15,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "10000 9 Cap de municipi 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10000"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 18,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
         "maxzoom": 16
-    },*/
-//*************************FINAL TOPONIMIA MTC25M RASTER***********************
-//*********************************INICI PUNTS*********************************
-{
-    "id": "10100 9 Cap de comarca 7",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level7",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
-        ],
-        [
-            "in",
-            "codi_top",
-            "10100"
-        ]
-    ],
-    "minzoom": 7,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Bold"
-        ],
-        "text-size": 12,
-        "symbol-placement": "point",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
     },
-    "paint": {
-        "text-color": "#f7f4f4",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "10100 9 Cap de comarca 8",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level8",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10102 10 Caseria 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10102"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "10100"
-        ]
-    ],
-    "minzoom": 8,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Bold"
-        ],
-        "text-size": 13,
-        "symbol-placement": "point",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15.333333333333334
+                    ],
+                    [
+                        17,
+                        16
+                    ]
+                ]
+            },
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
     },
-    "paint": {
-        "text-color": "#f7f4f4",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "10100 9 Cap de comarca 9",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level9",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10103 10 Colònia 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10103"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "10100"
-        ]
-    ],
-    "minzoom": 9,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Bold"
-        ],
-        "text-size": 14,
-        "symbol-placement": "point",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15.333333333333334
+                    ],
+                    [
+                        17,
+                        16
+                    ]
+                ]
+            },
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
     },
-    "paint": {
-        "text-color": "#f7f4f4",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "51004 7 Delta 9",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level9",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10104 10 Poble  llogaret 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10104"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "51004"
-        ]
-    ],
-    "minzoom": 9,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 14,
-        "symbol-placement": "line",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15.5
+                    ],
+                    [
+                        17,
+                        16
+                    ]
+                ]
+            },
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
     },
-    "paint": {
-        "text-color": "#417D05",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "10000 9 Cap de municipi 10",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level10",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10105 10 Urbanització 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10105"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "10000"
-        ]
-    ],
-    "minzoom": 10,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Regular"
-        ],
-        "text-size": 12,
-        "symbol-placement": "point",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ]
+                ]
+            },
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
     },
-    "paint": {
-        "text-color": "#f7f4f4",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "10100 9 Cap de comarca 10",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level10",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10106 10 Veïnat  raval  barri (aïllat) 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10106"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "10100"
-        ]
-    ],
-    "minzoom": 10,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Bold"
-        ],
-        "text-size": 15,
-        "symbol-placement": "point",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ]
+                ]
+            },
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
     },
-    "paint": {
-        "text-color": "#f7f4f4",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "50101 1 Massís  muntanyes 10",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level10",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10201 11 Barri  barriada  raval (part d'un nucli urbà) 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10201"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "50101"
-        ]
-    ],
-    "minzoom": 10,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 14,
-        "symbol-placement": "line",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": 16,
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 16
     },
-    "paint": {
-        "text-color": "#417D05",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "51004 7 Delta 10",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level10",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10202 11 Carrer  avinguda  passeig 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10202"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "51004"
-        ]
-    ],
-    "minzoom": 10,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 15,
-        "symbol-placement": "line",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Condensed Light"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#417D05",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "00001 17 Municipi 11",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level11",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10203 11 Plaça 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10203"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "00001"
-        ]
-    ],
-    "minzoom": 11,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 12,
-        "symbol-placement": "point",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Condensed Light"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        10
+                    ],
+                    [
+                        17,
+                        13.333333333333334
+                    ],
+                    [
+                        18,
+                        16.666666666666668
+                    ],
+                    [
+                        19,
+                        20
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#7D7D7D",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "10000 9 Cap de municipi 11",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level11",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10301 12 Masia  mas  casa  molí 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10301"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "10000"
-        ]
-    ],
-    "minzoom": 11,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Regular"
-        ],
-        "text-size": 13,
-        "symbol-placement": "point",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#f7f4f4",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "10100 9 Cap de comarca 11",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level11",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10302 12 Torre  vil·la  xalet 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10302"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "10100"
-        ]
-    ],
-    "minzoom": 11,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Bold"
-        ],
-        "text-size": 16,
-        "symbol-placement": "point",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#f7f4f4",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "50101 1 Massís  muntanyes 11",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level11",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10303 12 Apartaments  bloc de pisos 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10303"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "50101"
-        ]
-    ],
-    "minzoom": 11,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 15,
-        "symbol-placement": "line",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#417D05",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-}
-,
-{
-    "id": "51001 7 Arxipèlag 11",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level11",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10401 12 Borda  cabanya  cabana  cobert  pallissa  barraca 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10401"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "51001"
-        ]
-    ],
-    "minzoom": 11,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 14,
-        "symbol-placement": "line",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#417D05",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "51004 7 Delta 11",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level11",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10402 12 Corral  pleta  clos 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10402"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "51004"
-        ]
-    ],
-    "minzoom": 11,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 16,
-        "symbol-placement": "line",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#417D05",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "60301 5 Riu 11",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level11",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10403 12 Era 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10403"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "60301"
-        ]
-    ],
-    "minzoom": 11,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 12,
-        "symbol-placement": "line",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#4D81C6",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "00001 17 Municipi 12",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level12",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "10404 12 Hort 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "10404"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "00001"
-        ]
-    ],
-    "minzoom": 12,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 15,
-        "symbol-placement": "point",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#7D7D7D",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "10000 9 Cap de municipi 12",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level12",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "20100 12 Centres productors d'energia 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20100"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "10000"
-        ]
-    ],
-    "minzoom": 12,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Regular"
-        ],
-        "text-size": 14,
-        "symbol-placement": "point",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#f4f4f4",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "10100 9 Cap de comarca 12",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level12",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "20101 12 Central hidroelèctrica 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20101"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "10100"
-        ]
-    ],
-    "minzoom": 12,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Bold"
-        ],
-        "text-size": 17,
-        "symbol-placement": "point",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        13.5
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        16.5
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#f4f4f4",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "50101 1 Massís  muntanyes 12",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level12",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "20102 12 Central nuclear 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20102"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "50101"
-        ]
-    ],
-    "minzoom": 12,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 17,
-        "symbol-placement": "line",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        13.5
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        16.5
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#417D05",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "50102 1 Serra  serralada  serrat  carena 12",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level12",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "20103 12 Central tèrmica 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20103"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "50102"
-        ]
-    ],
-    "minzoom": 12,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 14,
-        "symbol-placement": "line",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#417D05",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "51001 7 Arxipèlag 12",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level12",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "20104 12 Parc eòlic 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20104"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "51001"
-        ]
-    ],
-    "minzoom": 12,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 15,
-        "symbol-placement": "line",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        14
+                    ],
+                    [
+                        17,
+                        16
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
     },
-    "paint": {
-        "text-color": "#417D05",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "51004 7 Delta 12",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level12",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "20201 12 Escorxador 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20201"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "51004"
-        ]
-    ],
-    "minzoom": 12,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 17,
-        "symbol-placement": "line",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#417D05",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "60103 6 Golf  badia 12",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level12",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "20202 12 Farinera 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20202"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "60103"
-        ]
-    ],
-    "minzoom": 12,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 14,
-        "symbol-placement": "line",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#4D81C6",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "60109 6 Mar 12",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level12",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "20203 12 Granja 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20203"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "60109"
-        ]
-    ],
-    "minzoom": 12,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 14,
-        "symbol-placement": "point",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#4D81C6",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "60203 6 Embassament  pantà 12",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level12",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "20204 12 Hivernacle 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20204"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "60203"
-        ]
-    ],
-    "minzoom": 12,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 14,
-        "symbol-placement": "line",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#4D81C6",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
-    }
-},
-{
-    "id": "60301 5 Riu 12",
-    "type": "symbol",
-    "source": "toponimia",
-    "source-layer": "level12",
-    "filter": [
-        "all",
-        [
-            "==",
-            "$type",
-            "LineString"
+    {
+        "id": "20205 12 Molí 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20205"
+            ]
         ],
-        [
-            "in",
-            "codi_top",
-            "60301"
-        ]
-    ],
-    "minzoom": 12,
-    "text-allow-overlap": true,
-    "text-ignore-placement": true,
-    "layout": {
-        "text-field": "{text_top}",
-        "text-font": [
-            "Open Sans Italic"
-        ],
-        "text-size": 13,
-        "symbol-placement": "line",
-        "text-anchor": "bottom",
-        "symbol-spacing": 750
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
     },
-    "paint": {
-        "text-color": "#4D81C6",
-        "text-halo-color": "rgba(0,0,0,0.75)",
-        "text-halo-width": 1,
-        "text-halo-blur": 1
+    {
+        "id": "20206 12 Piscifactoria 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20206"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20207 12 Sitja  celler 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20207"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20208 12 Viver 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20208"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20209 12 Magatzem 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20209"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20210 12 Cup 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20210"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20301 12 Bòbila  rajoleria  teuleria 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20301"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20302 12 Fàbrica de ciment 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20302"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20303 12 Fàbrica de guix  forn de calç 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20303"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20401 12 Fàbrica d'electrodomèstics 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20401"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20402 12 Fàbrica de components electrònics 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20402"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20501 12 Ebenisteria  fusteria 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20501"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20502 12 Serradora 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20502"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20601 12 Alts forns 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20601"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20602 12 Farga 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20602"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20701 12 Arts gràfiques 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20701"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20702 12 Editorial 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20702"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20703 12 Paperera 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20703"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20801 12 Abocador 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20801"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20802 12 Depuradora 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20802"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20803 12 Magatzem de ferralla 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20803"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20804 12 Incineradora 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20804"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20805 12 Deixalleria 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20805"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20901 12 Gravera 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20901"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20902 12 Guixera 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20902"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20903 12 Mina 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20903"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20904 12 Pedrera 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20904"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20905 12 Plataforma  plataforma petrolífera 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20905"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20906 12 Salina 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20906"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "20907 12 Extracció d'argiles 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "20907"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "21001 12 Indústria de l'automòbil 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "21001"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "21002 12 Maquinària industrial 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "21002"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "21101 12 Drassana 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "21101"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "21200 12 Indústries químiques 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "21200"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "21300 12 Indústries tèxtils 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "21300"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "21400 12 Indústries transformants 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "21400"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "21500 12 Locals industrials abandonats 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "21500"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "21600 12 Polígons industrials 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "21600"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "21700 12 Altres indústries 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "21700"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "21800 12 Magatzem  dipòsit 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "21800"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30101 15 Aparcament 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30101"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30102 15 Duana 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30102"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30103 15 Estació  baixador 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30103"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30104 15 Peatge 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30104"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30105 15 Terminal 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30105"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "30106 15 Dipòsit de vehicles  ITV 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30106"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30201 15 Aeroport 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30201"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        17.6
+                    ],
+                    [
+                        17,
+                        18.8
+                    ],
+                    [
+                        18,
+                        20
+                    ]
+                ]
+            },
+            "symbol-placement": "point",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "30202 15 Aeròdrom 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30202"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        14
+                    ],
+                    [
+                        17,
+                        16
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "30203 15 Heliport 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30203"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "30204 15 Pistes 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30204"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "30205 15 Torre de control 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30205"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30206 15 Far aeri 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30206"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30301 15 Dàrsena 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30301"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "30302 15 Far 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30302"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "30303 15 Moll 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30303"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "30304 15 Port 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30304"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30305 8 Línia de ferri 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30305"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "30401 8 Ferrocarril 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30401"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30402 8 Cremallera 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30402"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30403 8 Funicular 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30403"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30404 8 Telefèric 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30404"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30405 8 Monorail 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30405"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30406 8 Tramvia 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30406"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30407 15 Pas de tren 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30407"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30501 8 Xarxa bàsica no Generalitat. Autopista 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30501"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30502 8 Autovia 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30502"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30503 8 Carretera local 1  cruïlla de carreteres  de camins  pista 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30503"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30504 8 Carretera local 2 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30504"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30505 8 Carretera local 3 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30505"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30506 8 Carretera nacional 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30506"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30507 8 Camí  corriol  tallafocs  tomb  boga  revolt 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30507"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        14
+                    ],
+                    [
+                        17,
+                        16
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "30508 8 Carrerada  cabanera 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30508"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        14
+                    ],
+                    [
+                        17,
+                        16
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "30509 15 Viaducte  pont  pontó  gual  pas  palanca  passarel·la 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30509"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30510 15 Túnel 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30510"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "30511 8 Pista 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30511"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        14
+                    ],
+                    [
+                        17,
+                        16
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "30512 15 Àrea de servei 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30512"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30513 15 Àrea de descans 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30513"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30517 8 Xarxa bàsica Generalitat 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30517"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30518 8 Xarxa bàsica no Generalitat. No autopista 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30518"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30519 8 Codificació europea 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30519"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "30601 16 Gasoducte 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30601"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30602 15 Aqüeducte 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30602"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30603 16 Oleoducte 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30603"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30604 16 Instal·lació de radar 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30604"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30605 16 Línies AT 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30605"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30606 16 Repetidor TV  emissora 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30606"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30607 16 Torre AT 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30607"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30608 13 Torre de vigilància forestal 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30608"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "30609 8 Cinta transportadora 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30609"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "30700 8 Sistemes de transport per cable (teleselles) 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "30700"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40101 13 Ajuntament  casa de la vila 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40101"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40102 13 Parlament 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40102"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40103 13 Generalitat 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40103"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40104 13 Diputació 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40104"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40105 13 Govern civil 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40105"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40106 13 Palau de justícia 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40106"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40107 13 Jutjat 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40107"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40108 13 Oficina de l'Administració  INEM 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40108"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40109 13 Consell comarcal 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40109"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40201 13 Àrea de serveis (no vinculats a autopistes) 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40201"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40202 13 Botiga 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40202"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40203 13 Grans magatzems 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40203"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40204 13 Mercat 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40204"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40205 13 Supermercat 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40205"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40206 13 Gasolinera 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40206"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40207 13 Cooperativa 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40207"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40301 13 Asil  casal 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40301"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40302 13 Cementiri  fossar 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40302"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        13.5
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        16.5
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40303 13 Centre cívic  cultural 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40303"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40304 13 Guàrdia urbana 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40304"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40305 13 Parc de bombers 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40305"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40306 13 Orfenat 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40306"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40307 13 Presó 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40307"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40308 13 Biblioteca 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40308"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40309 13 Correus i telègrafs 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40309"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40401 14 Castell  ciutadella  força 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40401"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        14
+                    ],
+                    [
+                        17,
+                        16
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40402 14 Muralla 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40402"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40403 14 Arc 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40403"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40404 14 Museu 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40404"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40405 14 Necròpolis  poblat 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40405"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40406 14 Menhir  pedra 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40406"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40407 14 Dolmen 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40407"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40408 14 Talaia  torre de defensa  torre de guaita 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40408"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40409 14 Monument 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40409"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40410 14 Arbre singular 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40410"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40411 14 Paret singular  aqüeducte 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40411"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40412 14 Palau 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40412"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40413 14 Lloc o indret històric 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40413"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        14
+                    ],
+                    [
+                        17,
+                        16
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40414 14 Ciutat històrica (en ruïnes) 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40414"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        14
+                    ],
+                    [
+                        17,
+                        16
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40501 13 Acadèmia 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40501"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40502 13 Escola  col·legi 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40502"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40503 13 Escola tècnica 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40503"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40504 13 Guarderia 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40504"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40505 13 Institut 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40505"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40506 13 Parvulari 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40506"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40507 13 Seminari 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40507"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40508 13 Universitat 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40508"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "40601 13 Hospital 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40601"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40602 13 Ciutat sanitària 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40602"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        13.5
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        16.5
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40603 13 Balneari 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40603"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        13.5
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        16.5
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40604 13 Clínica 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40604"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40605 13 Dispensari  CAP 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40605"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40606 13 Maternitat 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40606"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40607 13 Sanatori mental 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40607"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40701 14 Abadia  monestir  priorat  cartoixa 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40701"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        16.5
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40702 14 Ermita  capella  oratori 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40702"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40703 14 Convent 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40703"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40704 14 Santuari 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40704"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40705 14 Església 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40705"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40706 14 Catedral  basílica 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40706"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40707 14 Temple 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40707"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40708 14 Sinagoga 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40708"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40709 14 Mesquita 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40709"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40801 13 Casino 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40801"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40802 13 Cinema 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40802"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40803 13 Autocinema 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40803"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40804 13 Complex polisportiu  polisportiu cobert 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40804"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40805 13 Estadi 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40805"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40806 13 Camp d'esports 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40806"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        14
+                    ],
+                    [
+                        17,
+                        16
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40807 13 Frontó 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40807"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40808 13 Parc d'atraccions 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40808"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40809 13 Parc públic 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40809"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40811 13 Autòdrom 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40811"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40812 13 Velòdrom 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40812"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40813 13 Cinòdrom 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40813"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40814 13 Teatre 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40814"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40815 13 Discoteca 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40815"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40816 13 Zoo 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40816"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40817 13 Piscina 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40817"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40818 13 Pistes d'esquí 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40818"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40819 13 Plaça de toros 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40819"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40820 13 Club esportiu  camp de golf 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40820"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40821 13 Centre cultural 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40821"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40822 13 Pista de tennis 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40822"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40823 13 Circuit de motos 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40823"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "40824 13 Parc Nacional 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40824"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18.5
+                    ],
+                    [
+                        17,
+                        20
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "40825 13 Parc Natural 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40825"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18.5
+                    ],
+                    [
+                        17,
+                        20
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "40826 13 Altres espais protegits (Parc  paratge  reserva  espai PEIN) 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40826"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ],
+                    [
+                        17,
+                        20
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "40827 13 Espai protegit marí 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40827"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ],
+                    [
+                        17,
+                        20
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "40901 13 Hotel 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40901"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40902 13 Motel 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40902"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40903 13 Fonda  hostal 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40903"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40904 13 Alberg  refugi  casa de colònies 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40904"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40905 13 Càmping 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40905"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40906 13 Parador 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40906"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40907 13 Residència 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40907"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40908 13 Restaurant 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40908"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40909 13 Refugi forestal  refugi de pescadors 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40909"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "40910 13 Apartament  aparthotel 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "40910"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41001 13 Campament militar 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41001"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41002 13 Camp de tir 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41002"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41003 13 Caserna 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41003"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41004 13 Aeroport militar  base 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41004"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41005 13 Dependències forces de seguretat 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41005"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41101 13 Estació d'aforament 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41101"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41102 13 Institut tècnic 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41102"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41103 13 Observatori astronòmic 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41103"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41104 13 Observatori meteorològic 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41104"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41201 13 Assegurances 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41201"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41202 13 Bancs 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41202"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41203 13 Borsa 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41203"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41204 13 Caixes d'estalvis 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41204"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41301 13 Creu  creu de terme 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41301"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41302 13 Fita  molló  monjoia  terme 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41302"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41303 13 Vèrtex geodèsic 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41303"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Condensed Light"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "41400 13 Centre d'associacions polítiques i altres associacions 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "41400"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "50102 1 Serra  serralada  serrat  carena 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50102"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 20,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 16
+    },
+    {
+        "id": "50104 1 Altiplà 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50104"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 16
+    },
+    {
+        "id": "50201 1 Agulla 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50201"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "50203 1 Bony  cap  cim  penya  pic  puig  punta  roc  tuc  tuca  muntanya 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50203"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "50204 1 Con volcànic 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50204"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "50301 2 Circ 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50301"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 16
+    },
+    {
+        "id": "50302 2 Coll  collada  port 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50302"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50303 2 Coma 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50303"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50304 2 Clot  fondo  rasa  sot 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50304"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "50305 2 Vall  conca 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50305"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 16
+    },
+    {
+        "id": "50306 2 Congost  afrau  estret  forat 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50306"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50401 2 Grau  pas 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50401"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "50501 3 Balç  cinglera  espadat 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50501"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50502 3 Penya-segat 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50502"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50601 3 Ras  rasos 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50601"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50602 3 Pla  plana 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50602"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 18,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 16
+    },
+    {
+        "id": "50701 3 Costa  falda  pala 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50701"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "50702 3 Morena 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50702"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "50801 3 Avenc  bòfia 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50801"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "50802 3 Abric  balma 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50802"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "50803 3 Bora  forat  tuta  grallera  cova 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50803"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "50901 4 Parada  partida  passant  prat  peça  sort  camp  tros  vinya 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50901"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "50902 4 Bosc 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50902"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        14
+                    ],
+                    [
+                        17,
+                        16
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "50903 4 Bac  baga  obac  obaga 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50903"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "50904 4 Solà  solana  solell 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50904"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "50905 4 Pleta  pletiu  devesa 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50905"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "50906 4 Era 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50906"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "50907 4 Hort  horta 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50907"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "50908 4 Paratge  mirador 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "50908"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "51001 7 Arxipèlag 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51001"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": 20,
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 16
+    },
+    {
+        "id": "51002 7 Cap  punta 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51002"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51003 7 Costa 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51003"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51005 7 Escull  faralló  niell 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51005"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "51006 7 Dunes 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51006"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "51007 7 Illa  illot 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51007"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "51008 7 Platja  platjola 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51008"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "51009 7 Port natural 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51009"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "51010 7 Arenal  areny  sorral  barra de sorra 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51010"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "51011 7 Península 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51011"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "51012 7 Istme 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "51012"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60101 6 Albufera 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60101"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60102 6 Aiguamoll  maresma  zona pantanosa 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60102"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60103 6 Golf  badia 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60103"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        20
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        }
+    },
+    {
+        "id": "60104 6 Cala 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60104"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        16.5
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "60105 6 Llac  estany  ivó  llacuna 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60105"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "60106 6 Gola  goleró 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60106"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "60107 6 Freu  estret 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60107"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "60108 6 Bassa  gorg  gorga  cocó  cadolla  toll  pèlag 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60108"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "60111 6 Glacera  congesta 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60111"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        14
+                    ],
+                    [
+                        18,
+                        16
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "60201 6 Bassa 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60201"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "60202 6 Cisterna 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60202"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "60203 6 Embassament  pantà 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60203"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18.8
+                    ],
+                    [
+                        17,
+                        20
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "60204 6 Pou 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60204"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "60205 6 Pou de glaç 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60205"
+            ]
+        ],
+        "minzoom": 18,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        18,
+                        12
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "60206 6 Dipòsit 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60206"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "60301 5 Riu 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60301"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        18.666666666666664
+                    ],
+                    [
+                        17,
+                        20
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "60302 5 Riera  rambla  rial 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60302"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        16
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "60303 5 Torrent  barranc  rasa  fondo  reguer  sot  canal 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60303"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        16.5
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "60304 5 Salt  saltant  cascada 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60304"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "60305 5 Font  bullidor  deu 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60305"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "60306 5 Guèiser  pou artesià 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60306"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "60401 5 Canal 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60401"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        15
+                    ],
+                    [
+                        17,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 17
+    },
+    {
+        "id": "60402 5 Séquia  rec 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60402"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Italic"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        14
+                    ],
+                    [
+                        17,
+                        16
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "60403 5 Tub  canonada 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60403"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "60404 5 Claveguera  desaigüe  desguàs 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60404"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "60501 15 Assut 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60501"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        15
+                    ],
+                    [
+                        19,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 19
+    },
+    {
+        "id": "60502 15 Presa  peixera  resclosa 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60502"
+            ]
+        ],
+        "minzoom": 16,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        17,
+                        15
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
+    },
+    {
+        "id": "60503 15 Escullera 16",
+        "type": "symbol",
+        "source": "toponimia",
+        "source-layer": "level16",
+        "filter": [
+            "all",
+            [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            [
+                "in",
+                "codi_top",
+                "60503"
+            ]
+        ],
+        "minzoom": 17,
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "layout": {
+            "text-field": "{text_top}",
+            "text-font": [
+                "Open Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        17,
+                        12
+                    ],
+                    [
+                        18,
+                        18
+                    ]
+                ]
+            },
+            "symbol-placement": "line",
+            "text-anchor": "bottom",
+            "symbol-spacing": 750
+        },
+        "paint": {
+            "text-color": "#ffffff",
+            "text-halo-color": "rgba(0,0,0,0.75)",
+            "text-halo-width": 1,
+            "text-halo-blur": 1
+        },
+        "maxzoom": 18
     }
-}
+
+//FI toponimia
 ,{
     "interactive": true,
     "id": "museu_1_poi",
