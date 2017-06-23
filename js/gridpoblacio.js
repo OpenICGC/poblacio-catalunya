@@ -455,7 +455,7 @@ function interaccioHTML() {
       console.info($('#social'));
       $('.social_in').hide();
       $('.social_out').show();
-      $('#titol').css('width', '90%');
+      $('#titol').css('width', '100%');
     } else {
 
       $(this).removeClass('fa-chevron-circle-up');
