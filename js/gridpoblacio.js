@@ -192,7 +192,6 @@ $(document).ready(function() {
           "type": "exponential",
           "stops": [
             [0, 0],
-
             [369, 369],
             [792, 792],
             [1188, 1188],
@@ -455,7 +454,7 @@ function interaccioHTML() {
       console.info($('#social'));
       $('.social_in').hide();
       $('.social_out').show();
-      $('#titol').css('width', '90%');
+      $('#titol').css('width', '100%');
     } else {
 
       $(this).removeClass('fa-chevron-circle-up');
@@ -511,6 +510,7 @@ function interaccioHTML() {
     removeClass(_DEFAULT_CLASS);
     $(this).addClass(_DEFAULT_CLASS);
 
+    map.animationLoop.set(3000);
     changeLayerColorPaintProperties($(this).attr('data'), true, true);
 
   });
@@ -652,7 +652,7 @@ function generaLlegendaDinamica(_quantiles, titol) {
 
 }
 
-function changeLayerProperties(layer, value) {
+function changeLayerProperties(layer, value, animate) {
 
   var style = {
     "paint": {
@@ -664,7 +664,9 @@ function changeLayerProperties(layer, value) {
       "fill-extrusion-height": {
         "property": value,
         "type": "exponential"
-      }
+      },
+      "fill-extrusion-duration": 600,
+      "fill-extrusion-animate": animate
     }
   };
 
@@ -755,41 +757,18 @@ function createStyleFromArray(_quantilesArray, style) {
 
 }
 
-var destHeight = {};
-var currentHeight = {};
-var startHeight = {};
-var start = null;
-var duration = 2000;
-var animProgress = 0;
 
-function changeLayerColorPaintProperties(data, filter, anim) {
+function changeLayerColorPaintProperties(data, filter, animate) {
 
-  var animate = anim || false;
-
-  var style = changeLayerProperties(_LAYER_ACTIVE, data);
-
-  if(animate) {
-
-    startHeight = $.extend( true, startHeight, destHeight );
-    currentHeight = $.extend( true, currentHeight, startHeight );
-    destHeight = style.paint["fill-extrusion-height"];
-    currentHeight.property = destHeight.property;
-
-    if(null != startHeight && null != destHeight)
-      console.log("Start: " + startHeight.stops[6][0] + " Dest: " + destHeight.stops[6][0]);
-
-  }
+  var shouldAnimate = animate || false;
+  var style = changeLayerProperties(_LAYER_ACTIVE, data, shouldAnimate);
 
   try{
 
-    if(!animate) {
-      var style = style.paint["fill-extrusion-height"];
-      startHeight = style;
-      destHeight = $.extend( true, destHeight, startHeight );
-      currentHeight = $.extend( true, currentHeight, startHeight );
-      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-height', style);
-    }
-    map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-color', style.paint["fill-extrusion-color"]);
+      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-height', style.paint["fill-extrusion-height"]);
+      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-color', style.paint["fill-extrusion-color"]);
+      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-duration', style.paint["fill-extrusion-duration"]);
+      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-animate', style.paint["fill-extrusion-animate"]);
     
     if (filter) {
       map.setFilter(_LAYER_ACTIVE, ['>', data, 0]);
@@ -801,48 +780,6 @@ function changeLayerColorPaintProperties(data, filter, anim) {
   }
 
   changeCSSGradientColors(arrayColors);
-
-  if(animate) {
-  
-    start = performance.now();
-    window.requestAnimationFrame(animateExtrusion);
-
-  }
-
-}
-
-function animateExtrusion(timestamp) {
-
-  var span = performance.now() - start;
-  animProgress = span/duration;
-  if(animProgress > 1.0) {
-    animProgress = 1.0;
-  }
-
-  for(var i=1, len=destHeight.stops.length; i<len; ++i) {
-    
-    var val = Math.round(startHeight.stops[i][0] + (destHeight.stops[i][0] - startHeight.stops[i][0])*animProgress);
-    currentHeight.stops[i][0] = val;
-    currentHeight.stops[i][1] = val;
-
-  }
-
-
-  try {
-
-    map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-height', currentHeight);
-
-  }
-  catch(Err) {
-
-  }
-
-  if(animProgress < 1.0)
-  {
-
-    window.requestAnimationFrame(animateExtrusion);
-
-  }
 
 }
 
