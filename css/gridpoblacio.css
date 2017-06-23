@@ -781,3 +781,12 @@ tr:nth-child(even) {
   padding-bottom: 10px;
   padding-top: 10px;
 }
+
+#ull_capa{
+  color: #686868;
+  float: right;
+  padding-right: 51px;
+  font-size: 1.2em;
+  cursor: pointer;
+
+}
