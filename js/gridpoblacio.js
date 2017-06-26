@@ -202,7 +202,6 @@ $(document).ready(function() {
           "type": "exponential",
           "stops": [
             [0, 0],
-
             [369, 369],
             [792, 792],
             [1188, 1188],
@@ -482,7 +481,7 @@ function interaccioHTML() {
       console.info($('#social'));
       $('.social_in').hide();
       $('.social_out').show();
-      $('#titol').css('width', '90%');
+      $('#titol').css('width', '100%');
     } else {
 
       $(this).removeClass('fa-chevron-circle-up');
@@ -537,7 +536,10 @@ function interaccioHTML() {
   $('.btn-xs').click(function() {
     removeClass(_DEFAULT_CLASS);
     $(this).addClass(_DEFAULT_CLASS);
-    changeLayerColorPaintProperties($(this).attr('data'), true);
+
+    map.animationLoop.set(3000);
+    changeLayerColorPaintProperties($(this).attr('data'), true, true);
+
   });
 
   $('div.noUi-base').prop('id', 'noUi-base');
@@ -677,9 +679,7 @@ function generaLlegendaDinamica(_quantiles, titol) {
 
 }
 
-
-
-function changeLayerProperties(layer, value) {
+function changeLayerProperties(layer, value, animate) {
 
   var style = {
     "paint": {
@@ -691,7 +691,9 @@ function changeLayerProperties(layer, value) {
       "fill-extrusion-height": {
         "property": value,
         "type": "exponential"
-      }
+      },
+      "fill-extrusion-duration": 600,
+      "fill-extrusion-animate": animate
     }
   };
 
@@ -782,21 +784,29 @@ function createStyleFromArray(_quantilesArray, style) {
 
 }
 
-function changeLayerColorPaintProperties(data, filter) {
 
-  var style = changeLayerProperties(_LAYER_ACTIVE, data);
-  try {
-    map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-color', style.paint["fill-extrusion-color"]);
-    map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-height', style.paint["fill-extrusion-height"]);
+function changeLayerColorPaintProperties(data, filter, animate) {
 
+  var shouldAnimate = animate || false;
+  var style = changeLayerProperties(_LAYER_ACTIVE, data, shouldAnimate);
+
+  try{
+
+      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-height', style.paint["fill-extrusion-height"]);
+      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-color', style.paint["fill-extrusion-color"]);
+      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-duration', style.paint["fill-extrusion-duration"]);
+      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-animate', style.paint["fill-extrusion-animate"]);
+    
     if (filter) {
       map.setFilter(_LAYER_ACTIVE, ['>', data, 0]);
     }
-  } catch (Err) {
 
   }
-  changeCSSGradientColors(arrayColors);
+  catch(Err){
 
+  }
+
+  changeCSSGradientColors(arrayColors);
 
 }
 
