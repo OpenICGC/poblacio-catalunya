@@ -11,9 +11,7 @@ var id_ = 'rp2014_qtree_level2_ofus_allvar_3857';
 var layers_ = [];
 var slider;
 var arrayColors = ['#FFD400', '#FFA344', '#EF5122', '#CB5726', '#CF1020', '#8A171A'];
-var arrayFilters = [0, 2378];//7478797
-
-
+var arrayFilters = [0, 2378];
 var _HOMES_Array = [0, 211, 422, 633, 844, 1055, 1267];
 var _DONES_Array = [0, 191, 382, 572, 763, 954, 1146];
 var _P_0_14_Array = [0, 88, 176, 264, 353, 441, 530];
@@ -25,20 +23,6 @@ var _P_NASC_CAT_Array = [0, 197, 394, 590, 787, 984, 1182];
 var _P_NASC_RES_Array = [0, 142, 285, 427, 569, 712, 855];
 var _P_NASC_EST_Array = [0, 241, 482, 723, 964, 1205, 1447];
 var _TOTAL_Array = [0, 369, 792, 1188, 1585, 1981, 2378];
-
-  var TOTAL_Catalunya=7478797;
-	var	HOMES_total=3662644;
-	var	DONES_total=3771210;
-	var	P_0_14_total=959248;
-	var	P_15_64_total=4963774;
-	var	P_65_I_MES_total=1236859;
-	var	P_ESPANYOL_total=5383294;
-	var	P_ESTRANGE_total=1070905;
-	var	P_NASC_CAT_total=4745689;
-	var	P_NASC_RES_total=1209516;
-	var	P_NASC_EST_total=1216264;
-
-
 var _LAYER_ACTIVE = 'poblacio_grid';
 var _LAYER_ACTIVE_SELECTED = 'poblacio_grid_selected';
 var color_selected = "#ffff00";
@@ -62,7 +46,7 @@ $(document).ready(function() {
   }
 
 
-  console.info($.url('?COLORS'));
+  
   if ($.url('?COLORS')) {
     try {
       var _cc = $.url('?COLORS').split(",");
@@ -112,9 +96,15 @@ $(document).ready(function() {
   });
 
 
+  //mostrar nivell zoom al costat copyright
+  //var controldiv = document.getElementsByClassName("mapboxgl-ctrl-bottom-left")[0];
+  //var zoom = document.createElement("div");
+
   jQuery('.mapboxgl-ctrl-top-right div:first')
     .append('<button id="bt_pitch" title="Perspectiva" class="mapboxgl-ctrl-icon glyphicon glyphicon-road"></button>');
 
+  //zoom.setAttribute("class", "control-zoom");
+  //controldiv.appendChild(zoom);
 
   jQuery('#bt_pitch').on('click', function() {
     var pitch = parseInt(map.getPitch());
@@ -531,6 +521,10 @@ function interaccioHTML() {
 
   if ($(document).height() < 640) {
     $("#burguer-menu-icon").trigger("click");
+
+	//$("#barraEines").css("top","176px");
+  //map.addControl(new mapboxgl.FullscreenControl());
+	map.addControl(new mapboxgl.FullscreenControl(),'bottom-left');
   }
 
   $('.btn-xs').click(function() {
@@ -796,7 +790,7 @@ function changeLayerColorPaintProperties(data, filter, animate) {
       map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-color', style.paint["fill-extrusion-color"]);
       map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-duration', style.paint["fill-extrusion-duration"]);
       map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-animate', style.paint["fill-extrusion-animate"]);
-    
+
     if (filter) {
       map.setFilter(_LAYER_ACTIVE, ['>', data, 0]);
     }
