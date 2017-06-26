@@ -397,6 +397,7 @@ function createSlider(arrayValues) {
     if (map.getZoom() >= 12) {
       setFilterToMap(values)
     }
+    map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-animate', false);
   });
 
   slider.noUiSlider.on('change', function(values, handle) {
@@ -404,6 +405,7 @@ function createSlider(arrayValues) {
     if (map.getZoom() < 12) {
       setFilterToMap(values)
     }
+    map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-animate', false);
   });
 
   slider.noUiSlider.on('end', function(values, handle) {
