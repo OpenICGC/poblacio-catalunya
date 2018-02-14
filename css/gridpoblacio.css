@@ -437,9 +437,9 @@ form {
   /* border-radius: 2px; */
   /* box-sizing: border-box; */
   width: 278px;
-  height: 35px;
+  height: 27px;
   /* border-bottom: 1px solid transparent; */
-  padding: 9px 70px 11px;
+  padding: 9px 7px 11px;
   /* transition-property: background, box-shadow; */
   /* transition-duration: .3s; */
 }
@@ -474,12 +474,13 @@ form {
 }
 
 #searchboxinput {
-  width: 100%
+  width: 100%;
+  top: -4px;
 }
 
 .searchbox-searchbutton {
   display: block;
-  padding: 2px 15px;
+  padding: 1px 15px;
   cursor: pointer;
   opacity: .61
 }
@@ -493,8 +494,8 @@ form {
   position: absolute;
   right: 0;
   top: 2px;
-  border-left: 1px solid #ddd;
-  /* height: 28px; */
+  border-left: 0px solid #ddd;
+  height: 26px;
 }
 
 .searchbox-searchbutton::before {
@@ -526,8 +527,7 @@ a, button, h1, h2, h3, h4, h5, h6, input, ol, p, textarea, th, ul {
 }
 
 .noUi-connect {
-  background: rgba(0, 0, 0, 0);
-  !important;
+  background: rgba(0, 0, 0, 0)!important;
 }
 
 .noUi-base {
@@ -616,6 +616,21 @@ legend {
   padding-bottom: 3px;
 }
 
+.btn-any {
+  color: #000000;
+  background-color: #dfeaef;
+  width: 70px;
+}
+
+
+.btn-any:hover {
+  color: #000000;
+  background-color: #dfeaef;
+  width: 70px;
+  border-color: #686868;
+}
+
+
 .btn-orange {
   color: #000000;
   background-color: #ccc;
@@ -636,6 +651,12 @@ legend {
 
 .activeBT {
   background-color: #686868 !important;
+  color: white !important;
+}
+
+
+.activeBTANY {
+  background-color: #067eb7 !important;
   color: white !important;
 }
 
@@ -704,7 +725,7 @@ hr {
 }
 
 
-}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;

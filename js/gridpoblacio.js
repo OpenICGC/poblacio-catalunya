@@ -1,39 +1,106 @@
 var serverName = "betaserver.icgc.cat";
-
 var urlApp = document.location.href;
 
-if (urlApp.indexOf('172.70.1.31') != -1) {
-  serverName = "172.70.1.31";
+if (urlApp.indexOf('172.20.70.31') != -1) {
+  serverName = "172.20.70.31";
 }
 
 var map;
-var id_ = 'rp2014_qtree_level2_ofus_allvar_3857';
+var id_ = 'idescat_2016';//rp2014_qtree_level2_ofus_allvar_3857
 var layers_ = [];
 var slider;
 var arrayColors = ['#FFD400', '#FFA344', '#EF5122', '#CB5726', '#CF1020', '#8A171A'];
 var arrayFilters = [0, 2378];
-var _HOMES_Array = [0, 211, 422, 633, 844, 1055, 1267];
-var _DONES_Array = [0, 191, 382, 572, 763, 954, 1146];
-var _P_0_14_Array = [0, 88, 176, 264, 353, 441, 530];
-var _P_15_64_Array = [0, 287, 573, 860, 1147, 1433, 1721];
-var _P_65_I_MES_Array = [0, 119, 237, 356, 475, 593, 713];
-var _P_ESPANYOL_Array = [0, 338, 675, 1013, 1351, 1688, 2026];
-var _P_ESTRANGE_Array = [0, 230, 460, 690, 921, 1151, 1382];
-var _P_NASC_CAT_Array = [0, 197, 394, 590, 787, 984, 1182];
-var _P_NASC_RES_Array = [0, 142, 285, 427, 569, 712, 855];
-var _P_NASC_EST_Array = [0, 241, 482, 723, 964, 1205, 1447];
-var _TOTAL_Array = [0, 369, 792, 1188, 1585, 1981, 2378];
-var _LAYER_ACTIVE = 'poblacio_grid';
+var _HOMES_Array_2014 = [0, 211, 422, 633, 844, 1055, 1267];
+var _DONES_Array_2014 = [0, 191, 382, 572, 763, 954, 1146];
+var _P_0_14_Array_2014 = [0, 88, 176, 264, 353, 441, 530];
+var _P_15_64_Array_2014 = [0, 287, 573, 860, 1147, 1433, 1721];
+var _P_65_I_MES_Array_2014 = [0, 119, 237, 356, 475, 593, 713];
+var _P_ESPANYOL_Array_2014 = [0, 338, 675, 1013, 1351, 1688, 2026];
+var _P_ESTRANGE_Array_2014 = [0, 230, 460, 690, 921, 1151, 1382];
+var _P_NASC_CAT_Array_2014 = [0, 197, 394, 590, 787, 984, 1182];
+var _P_NASC_RES_Array_2014 = [0, 142, 285, 427, 569, 712, 855];
+var _P_NASC_EST_Array_2014 = [0, 241, 482, 723, 964, 1205, 1447];
+var _TOTAL_Array_2014 = [0, 369, 792, 1188, 1585, 1981, 2378];
+
+var _HOMES_Array_2016 = [0, 207, 413, 620, 827, 1033, 1240];
+var _DONES_Array_2016 = [0, 232, 464, 696, 929, 1161, 1393];
+var _P_0_14_Array_2016 = [0, 89, 178, 266, 355, 444, 533];
+var _P_15_64_Array_2016 = [0, 287, 573, 860, 1147, 1433, 1720];
+var _P_65_I_MES_Array_2016 = [0, 161, 323, 484, 645, 807, 968];
+var _P_ESPANYOL_Array_2016 = [0, 390, 781, 1172, 1562, 1952, 2343];
+var _P_ESTRANGE_Array_2016 = [0, 154, 308, 462, 616, 770, 924];
+var _P_NASC_CAT_Array_2016 = [0, 267, 534, 801, 1068, 1335, 1602];
+var _P_NASC_RES_Array_2016 = [0, 122, 245, 368, 490, 612, 735];
+var _P_NASC_EST_Array_2016 = [0, 184, 367, 551, 735, 918, 1102];
+var _TOTAL_Array_2016 = [0, 453, 889, 1325, 1761, 2197, 2633];
+
+
+var _HOMES_Array = _HOMES_Array_2016;
+var _DONES_Array = _DONES_Array_2016;
+var _P_0_14_Array = _P_0_14_Array_2016;
+var _P_15_64_Array = _P_15_64_Array_2016;
+var _P_65_I_MES_Array = _P_65_I_MES_Array_2016;
+var _P_ESPANYOL_Array = _P_ESPANYOL_Array_2016;
+var _P_ESTRANGE_Array = _P_ESTRANGE_Array_2016;
+var _P_NASC_CAT_Array = _P_NASC_CAT_Array_2016;
+var _P_NASC_RES_Array = _P_NASC_RES_Array_2016;
+var _P_NASC_EST_Array = _P_NASC_EST_Array_2016;
+var _TOTAL_Array = _TOTAL_Array_2016;
+
+var _LAYER_2016 = 'poblacio_grid_2016';
+var _LAYER_2014 = 'poblacio_grid_2014';
+var _LAYER_ACTIVE = _LAYER_2016;
+var _LAYER_NO_ACTIVE = _LAYER_2014;
 var _LAYER_ACTIVE_SELECTED = 'poblacio_grid_selected';
 var color_selected = "#ffff00";
 var _DEFAULT_CLASS = "activeBT";
+var _DEFAULT_CLASS_ANY = "activeBTANY";
 var _DEFAULT_PROPERTI = "TOTAL";
 var objApp = {};
 var arrayXYZPB = [1.2293, 41.1246, 13, 45, -17.6];
-$(document).ready(function() {
+
+
+
+function matriuAnys(any) {
+
+  if (any == 2016) {
+
+    _HOMES_Array = _HOMES_Array_2016;
+    _DONES_Array = _DONES_Array_2016;
+    _P_0_14_Array = _P_0_14_Array_2016;
+    _P_15_64_Array = _P_15_64_Array_2016;
+    _P_65_I_MES_Array = _P_65_I_MES_Array_2016;
+    _P_ESPANYOL_Array = _P_ESPANYOL_Array_2016;
+    _P_ESTRANGE_Array = _P_ESTRANGE_Array_2016;
+    _P_NASC_CAT_Array = _P_NASC_CAT_Array_2016;
+    _P_NASC_RES_Array = _P_NASC_RES_Array_2016;
+    _P_NASC_EST_Array = _P_NASC_EST_Array_2016;
+    _TOTAL_Array = _TOTAL_Array_2016;
+
+  } else {
+
+    _HOMES_Array = _HOMES_Array_2014;
+    _DONES_Array = _DONES_Array_2014;
+    _P_0_14_Array = _P_0_14_Array_2014;
+    _P_15_64_Array = _P_15_64_Array_2014;
+    _P_65_I_MES_Array = _P_65_I_MES_Array_2014;
+    _P_ESPANYOL_Array = _P_ESPANYOL_Array_2014;
+    _P_ESTRANGE_Array = _P_ESTRANGE_Array_2014;
+    _P_NASC_CAT_Array = _P_NASC_CAT_Array_2014;
+    _P_NASC_RES_Array = _P_NASC_RES_Array_2014;
+    _P_NASC_EST_Array = _P_NASC_EST_Array_2014;
+    _TOTAL_Array = _TOTAL_Array_2014;
+
+  }
+}
+
+
+$(document).ready(function () {
 
   //arrayColors = chroma.scale(['#FFD400', '#cc0000']).mode('lch').colors(6);
-  arrayColors = chroma.scale(['#EFD905', '#7700ff']).mode('lch').colors(6);
+  //arrayColors = chroma.scale(['#EFD905', '#7700ff']).mode('lch').colors(6);
+  arrayColors = chroma.scale(['#9ad675', '#1437b5']).mode('lch').colors(6);
   arrayValues = _TOTAL_Array;
 
 
@@ -42,11 +109,11 @@ $(document).ready(function() {
     try {
       arrayXYZPB = $.url('?XYZPB').split(",");
       console.info(arrayXYZPB);
-    } catch (err) {}
+    } catch (err) { }
   }
 
 
-  
+
   if ($.url('?COLORS')) {
     try {
       var _cc = $.url('?COLORS').split(",");
@@ -66,8 +133,6 @@ $(document).ready(function() {
   }
 
 
-
-
   mapboxgl.accessToken = 'NOT-REQUIRED-WITH-YOUR-VECTOR-TILES-DATA';
   map = new mapboxgl.Map({
     container: 'map',
@@ -75,7 +140,7 @@ $(document).ready(function() {
     pitch: arrayXYZPB[3],
     hash: false,
     bearing: arrayXYZPB[4],
-    style: styleGris, //styleBlanc
+    style: 'https://tilemaps.icgc.cat/tileserver/styles/dark.json',
     zoom: arrayXYZPB[2]
   });
 
@@ -96,17 +161,13 @@ $(document).ready(function() {
   });
 
 
-  //mostrar nivell zoom al costat copyright
-  //var controldiv = document.getElementsByClassName("mapboxgl-ctrl-bottom-left")[0];
-  //var zoom = document.createElement("div");
+
 
   jQuery('.mapboxgl-ctrl-top-right div:first')
     .append('<button id="bt_pitch" title="Perspectiva" class="mapboxgl-ctrl-icon glyphicon glyphicon-road"></button>');
 
-  //zoom.setAttribute("class", "control-zoom");
-  //controldiv.appendChild(zoom);
 
-  jQuery('#bt_pitch').on('click', function() {
+  jQuery('#bt_pitch').on('click', function () {
     var pitch = parseInt(map.getPitch());
     pitch == 60 ? pitch = 0 : pitch = pitch + 30;
     map.easeTo({
@@ -117,12 +178,12 @@ $(document).ready(function() {
 
   dataTable(null);
 
-  map.on('load', function() {
+  map.on('load', function () {
 
 
     map.getCanvas().style.cursor = 'default'
 
-    map.addSource('vector_layer_', {
+    map.addSource('vector_layer_2016', {
       "attribution": "Font: <a href='https://www.idescat.cat/' target='_blank'>Idescat</a>",
       "type": "vector",
       "center": [1.8457, 41.7262, 8],
@@ -130,48 +191,46 @@ $(document).ready(function() {
       "format": "pbf",
       "maxzoom": 16,
       "minzoom": 6,
-      "name": "gridpoblacio",
-      "bounds": [0.2471923828125, 41.064100828659, 3.3013916015625, 43.390095665799],
-      "basename": "gridpoblacio",
-      "profile": "mercator",
-      "scale": 1,
-      "tiles": ["http://" + serverName + "/tileserver3/tileserver.php?%2Findex.json&callback=_callbacks_._0iuiar2as?/gridpoblacio/{z}/{x}/{y}.pbf"],
-      "tilejson": "2.0.0",
-      "scheme": "xyz",
-      "grids": ["http://" + serverName + "/tileserver3/tileserver.php?%2Findex.json&callback=_callbacks_._0iuiar2as?/gridpoblacio/{z}/{x}/{y}.grid.json"],
+      "tiles": ["https://tilemaps.icgc.cat/tileserver/tileserver.php/gridpoblacio2016/{z}/{x}/{y}.pbf"],
       "vector_layers": [{
-        "id": "rp2014_qtree_level2_ofus_allvar_3857",
-        "description": "",
-        "fields": {
-          "ID": "Number",
-          "TOTAL": "Number",
-          "HOMES": "Number",
-          "DONES": "Number",
-          "P_0_14": "Number",
-          "P_15_64": "Number",
-          "P_65_I_MES": "Number",
-          "P_ESPANYOL": "Number",
-          "P_ESTRANGE": "Number",
-          "P_NASC_CAT": "Number",
-          "P_NASC_RES": "Number",
-          "P_NASC_EST": "Number",
-          "ID_PARE": "Number",
-          "ORDRE_DIV": "Number",
-          "GRD_FIXID": "String"
-        }
-      }],
-      "zoom": 11,
-      "tileUrl": "http://" + serverName + "/tileserver3/tileserver.php?%252Findex.json&callback=_callbacks_._0iuiar2as?/gridpoblacio/8/129/95.pbf"
+        "id": "idescat_2016"
+      }]
     });
 
+    map.addSource('vector_layer_2014', {
+      "attribution": "Font: <a href='https://www.idescat.cat/' target='_blank'>Idescat</a>",
+      "type": "vector",
+      "center": [1.8457, 41.7262, 8],
+      "description": "grid poblacio idescat",
+      "format": "pbf",
+      "maxzoom": 16,
+      "minzoom": 6,
+      "tiles": ["https://tilemaps.icgc.cat/tileserver/tileserver.php/gridpoblacio2014/{z}/{x}/{y}.pbf"],
+      "vector_layers": [{
+        "id": "rp2014_qtree_level2_ofus_allvar_3857"
+      }]
+    });
+
+
     map.addLayer({
-      'id': _LAYER_ACTIVE,
-      'source': 'vector_layer_',
+      'id': _LAYER_2014,
+      'source': 'vector_layer_2014',
       'source-layer': 'rp2014_qtree_level2_ofus_allvar_3857',
-      interactive: true,
+      'interactive': true,
+      "transition": {
+        "duration": 2600,
+        "delay": 0
+      },
       'type': 'fill-extrusion',
+      "layout": {
+        "visibility": "none"
+      },
       "paint": {
         'fill-extrusion-opacity': .9,
+        'fill-extrusion-height-transition': {
+          'duration': 600,
+          'delay': 0
+        },
         "fill-extrusion-color": {
           "property": _DEFAULT_PROPERTI,
           "type": "exponential",
@@ -186,7 +245,6 @@ $(document).ready(function() {
             [2377, arrayColors[5]]
           ]
         },
-
         "fill-extrusion-height": {
           "property": _DEFAULT_PROPERTI,
           "type": "exponential",
@@ -200,50 +258,92 @@ $(document).ready(function() {
             [2377, 2378],
           ],
         }
-
       },
-      "filter": [">", _DEFAULT_PROPERTI, 0]
-
-    }, "10100 9 Cap de comarca 8");
-
-
-
+      "filter": ["any", [">", _DEFAULT_PROPERTI, 0], ['has', _DEFAULT_PROPERTI]]
+    }
+      , "10100 9 Cap de comarca 8"
+    );
 
 
+
+
+    map.addLayer({
+      'id': _LAYER_2016,
+      'source': 'vector_layer_2016',
+      'source-layer': 'idescat_2016',
+      'interactive': true,
+      "transition": {
+        "duration": 2600,
+        "delay": 0
+      },
+      'type': 'fill-extrusion',
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        'fill-extrusion-opacity': .9,
+        'fill-extrusion-height-transition': {
+          'duration': 600,
+          'delay': 0
+        },
+        "fill-extrusion-color": {
+          "property": _DEFAULT_PROPERTI,
+          "type": "exponential",
+          "stops": [
+
+            [0, arrayColors[0]],
+            [_TOTAL_Array_2016[0], arrayColors[0]],
+            [_TOTAL_Array_2016[1], arrayColors[1]],
+            [_TOTAL_Array_2016[2], arrayColors[2]],
+            [_TOTAL_Array_2016[3], arrayColors[3]],
+            [_TOTAL_Array_2016[4], arrayColors[4]],
+            [_TOTAL_Array_2016[5], arrayColors[5]]
+          ]
+        },
+        "fill-extrusion-height": {
+          "property": _DEFAULT_PROPERTI,
+          "type": "exponential",
+          "stops": [
+            [0, 0],
+            [_TOTAL_Array_2016[0], _TOTAL_Array_2016[0]],
+            [_TOTAL_Array_2016[1], _TOTAL_Array_2016[1]],
+            [_TOTAL_Array_2016[2], _TOTAL_Array_2016[2]],
+            [_TOTAL_Array_2016[3], _TOTAL_Array_2016[3]],
+            [_TOTAL_Array_2016[4], _TOTAL_Array_2016[4]],
+            [_TOTAL_Array_2016[5], _TOTAL_Array_2016[5]]
+          ],
+        }
+      },
+      "filter": ["any", [">", _DEFAULT_PROPERTI, 0], ['has', _DEFAULT_PROPERTI]]
+    }
+      , "10100 9 Cap de comarca 8"
+    );
+
+    matriuAnys(getActiveAny(_DEFAULT_CLASS_ANY));
 
 
     generaLlegendaDinamica(null, null);
 
-    map.on('mousemove', _LAYER_ACTIVE, function(e) {
+    map.on('mousemove', _LAYER_ACTIVE, function (e) { _mouseMove(e);});
+    map.on('mouseleave', _LAYER_ACTIVE, function () { _mouseleave()});
+    map.on('mousemove', _LAYER_NO_ACTIVE, function (e) { _mouseMove(e);});
+    map.on('mouseleave', _LAYER_NO_ACTIVE, function () { _mouseleave()});
 
-      map.getCanvas().style.cursor = 'pointer';
-      var feature = e.features[0];
-      var _prop = getActivePropertie(_DEFAULT_CLASS);
-
-      dataTable(feature);
-
-      popup.setLngLat(e.lngLat)
-        .setText(feature.properties[_prop])
-        .addTo(map);
-
-    });
-
-    map.on('click', _LAYER_ACTIVE, function() {
-      //  $('#features').toggle();
-    });
-
-
-    map.on('mouseleave', _LAYER_ACTIVE, function() {
+    function _mouseleave(){
       map.getCanvas().style.cursor = '';
       popup.remove();
       dataTable(null);
-      /*
-      if (map.getZoom() >= 11) {
-        map.setFilter(_LAYER_ACTIVE_SELECTED, ['==', "ID", ""]);
-      }
-      */
+    }
 
-    });
+    function _mouseMove(e){
+      map.getCanvas().style.cursor = 'pointer';
+      var feature = e.features[0];
+      var _prop = getActivePropertie(_DEFAULT_CLASS);
+      dataTable(feature);
+      popup.setLngLat(e.lngLat)
+        .setText(feature.properties[_prop])
+        .addTo(map);
+    }
 
     if ($.url('?PROP')) {
       try {
@@ -253,23 +353,41 @@ $(document).ready(function() {
         console.info(err);
       }
     }
+
+    if ($.url('?ANY')) {
+      try {
+
+        $('.btn-any').each(function () {
+
+          var any = $(this).attr('data');
+          if (any == $.url('?ANY')) {
+            removeClassAny(_DEFAULT_CLASS_ANY);
+            $(this).addClass(_DEFAULT_CLASS_ANY);
+            setActiveAny($.url('?PROP'));
+          }
+
+        });
+
+
+      } catch (err) {
+        console.info(err);
+      }
+    }
+
+
+
+
     if ($.url('?FILTERS')) {
       try {
         arrayFilters = $.url('?FILTERS').split(",");
         updateSliderLimits(arrayFilters);
-      } catch (err) {}
+      } catch (err) { }
     }
-
+    activaLayerAny();
   });
 
   createSlider(arrayValues);
   interaccioHTML();
-
-
-
-
-
-
 
 
 
@@ -369,14 +487,13 @@ function createSlider(arrayValues) {
     start: [arrayValues[0], arrayValues[6]],
     connect: true,
     format: {
-      to: function(value) {
+      to: function (value) {
         return parseInt(value).toFixed(0);
       },
-      from: function(value) {
+      from: function (value) {
         return parseInt(value).toFixed(0);
       }
     },
-    //tooltips: [ true,null, true ],
     tooltips: true,
     range: {
       'min': arrayValues[0],
@@ -391,24 +508,24 @@ function createSlider(arrayValues) {
     density: calculateDesity(arrayValues[0], arrayValues[6])
   });
 
-  slider.noUiSlider.on('slide', function(values, handle) {
+  slider.noUiSlider.on('slide', function (values, handle) {
     $('.noUi-tooltip').show();
 
     if (map.getZoom() >= 12) {
       setFilterToMap(values)
     }
-    map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-animate', false);
+
   });
 
-  slider.noUiSlider.on('change', function(values, handle) {
+  slider.noUiSlider.on('change', function (values, handle) {
     $('.noUi-tooltip').show();
     if (map.getZoom() < 12) {
       setFilterToMap(values)
     }
-    map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-animate', false);
+
   });
 
-  slider.noUiSlider.on('end', function(values, handle) {
+  slider.noUiSlider.on('end', function (values, handle) {
     $('.noUi-tooltip').hide();
 
   });
@@ -427,7 +544,7 @@ function interaccioHTML() {
 
 
   $('#c_init').colorpicker(optionsColorPicker).on('changeColor.colorpicker',
-    function(event) {
+    function (event) {
       $('#c_init').css('background-color', event.color.toHex());
       arrayColors[0] = event.color.toHex();
       arrayColors = chroma.scale([arrayColors[0], arrayColors[5]]).mode('lch').colors(6);
@@ -438,7 +555,7 @@ function interaccioHTML() {
 
 
   $('#c_end').colorpicker(optionsColorPicker).on('changeColor.colorpicker',
-    function(event) {
+    function (event) {
       $('#c_end').css('background-color', event.color.toHex());
       arrayColors[5] = event.color.toHex();
       arrayColors = chroma.scale([arrayColors[0], arrayColors[5]]).mode('lch').colors(6);
@@ -452,20 +569,20 @@ function interaccioHTML() {
   $('#c_end').css('background-color', arrayColors[5]);
 
 
-    $('#ull_capa').click(function() {
-          if ($(this).hasClass('fa-eye')) { //obert
-                $(this).removeClass('fa-eye');
-                $(this).addClass('fa-eye-slash');
-                  map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-opacity', 0);
-            }else{
-                $(this).addClass('fa-eye');
-                $(this).removeClass('fa-eye-slash');
-                  map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-opacity', .9);
-            }
+  $('#ull_capa').click(function () {
+    if ($(this).hasClass('fa-eye')) { //obert
+      $(this).removeClass('fa-eye');
+      $(this).addClass('fa-eye-slash');
+      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-opacity', 0);
+    } else {
+      $(this).addClass('fa-eye');
+      $(this).removeClass('fa-eye-slash');
+      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-opacity', .9);
+    }
 
-    });
+  });
 
-  $('#burguer-menu-icon').click(function() {
+  $('#burguer-menu-icon').click(function () {
 
     if ($(this).hasClass('fa-chevron-circle-down')) { //obert
       $(this).removeClass('fa-chevron-circle-down');
@@ -492,12 +609,14 @@ function interaccioHTML() {
 
 
 
-  $('#bt_vincle').on('click', function() {
+  $('#bt_vincle').on('click', function () {
 
     var temaActiu = getActivePropertie(_DEFAULT_CLASS);
+    var anyActiu = getActiveAny(_DEFAULT_CLASS_ANY);
 
     var params = "?XYZPB=" + map.getCenter().lng.toFixed(6) + "," + map.getCenter().lat.toFixed(6) + "," + map.getZoom().toFixed(0) + "," + map.getPitch().toFixed(1) + "," + map.getBearing().toFixed(1) +
       "&PROP=" + temaActiu +
+      "&Any=" + anyActiu +
       "&COLORS=" + arrayColors[0].replace('#', '') + "," + arrayColors[5].replace('#', '') +
       "&FILTERS=" + arrayFilters[0] + "," + arrayFilters[1] + "&";
     var currentURL = "http://" + $.url('hostname') + $.url('path') + params;
@@ -509,40 +628,64 @@ function interaccioHTML() {
   });
 
 
-  //$(document).hotkeys('alt+ctrl+j', 'alt+ctrl+m', function(){
-  $(document).bind('keydown', 'alt+ctrl+m', function() {
+
+  $(document).bind('keydown', 'alt+ctrl+m', function () {
 
     map.flyTo({
       center: [1.7662, 41.3019],
       zoom: 13.43
     });
-    //  $('#alertmodal .alertmodal-body').html("Ups!! que està passant aqui? <i class='fa fa-comment-o' aria-hidden='true'></i>");
-    //  $('#alertmodal').modal('show');
+
   });
 
 
   if ($(document).height() < 640) {
     $("#burguer-menu-icon").trigger("click");
-
-	//$("#barraEines").css("top","176px");
-  //map.addControl(new mapboxgl.FullscreenControl());
-	map.addControl(new mapboxgl.FullscreenControl(),'bottom-left');
+    map.addControl(new mapboxgl.FullscreenControl(), 'bottom-left');
   }
 
-  $('.btn-xs').click(function() {
+  $('.btn-orange').click(function () {
     removeClass(_DEFAULT_CLASS);
     $(this).addClass(_DEFAULT_CLASS);
-
-    map.animationLoop.set(3000);
     changeLayerColorPaintProperties($(this).attr('data'), true, true);
 
   });
+
+  $('.btn-any').click(function () {
+    removeClassAnys(_DEFAULT_CLASS_ANY);
+    $(this).addClass(_DEFAULT_CLASS_ANY);
+    var any = $(this).attr('data');
+    setActiveAny(any);
+    matriuAnys(any);
+
+    changeLayerColorPaintProperties(getActivePropertie(_DEFAULT_CLASS), true, true);
+
+  });
+
+  function setActiveAny(any) {
+    if (any.indexOf('2016') != -1) { //soc 2016
+      _LAYER_ACTIVE = _LAYER_2016;
+      _LAYER_NO_ACTIVE = _LAYER_2014;
+    } else {//soc 2014
+      _LAYER_ACTIVE = _LAYER_2014;
+      _LAYER_NO_ACTIVE = _LAYER_2016;
+    }
+
+    activaLayerAny();
+
+  }
+
+
+
+
+
+
 
   $('div.noUi-base').prop('id', 'noUi-base');
   changeCSSGradientColors(arrayColors);
 
 
-  jQuery('#bt_capture').on('click', function() {
+  jQuery('#bt_capture').on('click', function () {
     $('#md_print').modal({
       show: true
     });
@@ -550,6 +693,11 @@ function interaccioHTML() {
 
 }
 
+function activaLayerAny() {
+  map.setLayoutProperty(_LAYER_ACTIVE, 'visibility', 'visible');
+  map.setLayoutProperty(_LAYER_NO_ACTIVE, 'visibility', 'none');
+
+}
 
 function setFilterToMap(values) {
 
@@ -558,23 +706,44 @@ function setFilterToMap(values) {
   var _prop = getActivePropertie(_DEFAULT_CLASS);
 
   map.setFilter(_LAYER_ACTIVE, ["all", [">", _prop, parseInt(values[0])],
-    ["<", _prop, parseInt(values[1])]
+    ["<", _prop, parseInt(values[1])], ['has', _prop]
+  ]);
+
+  map.setFilter(_LAYER_NO_ACTIVE, ["all", [">", _prop, parseInt(values[0])],
+    ["<", _prop, parseInt(values[1])], ['has', _prop]
   ]);
 
 }
 
 
 function removeClass(_className) {
-  $('.btn-xs').each(function() {
+  $('.btn-orange').each(function () {
     $(this).removeClass(_className);
   });
 }
 
+function removeClassAnys(_className) {
+  $('.btn-any').each(function () {
+    $(this).removeClass(_className);
+  });
+}
+
+function getActiveAny(_className) {
+
+  var defaultProperti = _DEFAULT_PROPERTI;
+  $('.btn-any').each(function () {
+    if ($(this).hasClass(_className)) {
+      defaultProperti = $(this).attr('data')
+      return defaultProperti;
+    }
+  });
+  return defaultProperti;
+}
 
 function getActivePropertie(_className) {
 
   var defaultProperti = _DEFAULT_PROPERTI;
-  $('.btn-xs').each(function() {
+  $('.btn-xs').each(function () {
     if ($(this).hasClass(_className)) {
       defaultProperti = $(this).attr('data')
       return defaultProperti;
@@ -586,7 +755,7 @@ function getActivePropertie(_className) {
 
 function setActivePropertie(PROP) {
 
-  $('.btn-xs').each(function() {
+  $('.btn-xs').each(function () {
     var po = $(this).attr('data');
 
     if (po == PROP) {
@@ -628,7 +797,6 @@ function setValorsSlider(valors) {
 
 
 function updateSliderLimits(valors) {
-
   slider.noUiSlider.set([valors[0], valors[1]]);
   setFilterToMap(valors);
 
@@ -683,13 +851,16 @@ function changeLayerProperties(layer, value, animate) {
       "fill-extrusion-color": {
         "property": value,
         "type": "exponential"
+
       },
       "fill-extrusion-height": {
         "property": value,
         "type": "exponential"
       },
-      "fill-extrusion-duration": 600,
-      "fill-extrusion-animate": animate
+      'fill-extrusion-height-transition': {
+        'duration': 600,
+        'delay': 0
+      },
     }
   };
 
@@ -786,20 +957,24 @@ function changeLayerColorPaintProperties(data, filter, animate) {
   var shouldAnimate = animate || false;
   var style = changeLayerProperties(_LAYER_ACTIVE, data, shouldAnimate);
 
-  try{
+  try {
 
-      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-height', style.paint["fill-extrusion-height"]);
-      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-color', style.paint["fill-extrusion-color"]);
-      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-duration', style.paint["fill-extrusion-duration"]);
-      map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-animate', style.paint["fill-extrusion-animate"]);
+    map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-height', style.paint["fill-extrusion-height"]);
+    map.setPaintProperty(_LAYER_ACTIVE, 'fill-extrusion-color', style.paint["fill-extrusion-color"]);
+
+    map.setPaintProperty(_LAYER_NO_ACTIVE, 'fill-extrusion-height', style.paint["fill-extrusion-height"]);
+    map.setPaintProperty(_LAYER_NO_ACTIVE, 'fill-extrusion-color', style.paint["fill-extrusion-color"]);
+
 
     if (filter) {
-      map.setFilter(_LAYER_ACTIVE, ['>', data, 0]);
+      map.setFilter(_LAYER_ACTIVE, ["all", ['>', data, 0], ['has', data]]);
+      map.setFilter(_LAYER_NO_ACTIVE, ["all", ['>', data, 0], ['has', data]]);
     }
 
-  }
-  catch(Err){
 
+  }
+  catch (Err) {
+    console.info(Err);
   }
 
   changeCSSGradientColors(arrayColors);
