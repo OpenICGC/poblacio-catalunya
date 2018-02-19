@@ -32,327 +32,337 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel='stylesheet' href='http://betaserver.icgc.cat/vendors/mapbox-gl-js/v0.44.0/mapbox-gl.css' />
-	<link rel="stylesheet" href="/vendors/bootstrap-3.3.7/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="/vendors/css/bootstrap-colorpicker.min.css">
-	<link rel="stylesheet" href="/vendors/font-awesome-4.7.0/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="/vendors/uislider-10.0.0/nouislider.min.css" />
+	<link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' />
+	<link rel="stylesheet" href="vendors/css/bootstrap-3.3.7/bootstrap.min.css" />
+	<link rel="stylesheet" href="vendors/css/bootstrap-colorpicker.min.css">
+	<link rel="stylesheet" href="vendors/css/font-awesome-4.7.0/font-awesome.min.css" />
+	<link rel="stylesheet" href="vendors/css/uislider-10.0.0/nouislider.min.css" />
 	<link rel="stylesheet" href="css/gridpoblacio.css">
-	<script src="/vendors/js/jquery-3.2.1.min.js"></script>
-	<script src="/vendors/js/jquery.hotkeys.js"></script>
-	<script src="/vendors/js/url.min.js"></script>
-	<script src="/vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-	<script src="/vendors/js/bootstrap-colorpicker.min.js"></script>
-	<script src="/vendors/chroma/chroma.min.js"></script>
-	<script src="/vendors/wnumb-1.1.0/wNumb.js"></script>
-	<script src="/vendors/uislider-10.0.0/nouislider.min.js"></script>
-	<script src="http://betaserver.icgc.cat/vendors/mapbox-gl-js/v0.44.0/mapbox-gl.js"></script>
+	<script src="vendors/js/jquery-3.2.1.min.js"></script>
+	<script src="vendors/js/jquery.hotkeys.js"></script>
+	<script src="vendors/js/url.min.js"></script>
+	<script src="vendors/js/bootstrap-3.3.7/bootstrap.min.js"></script>
+	<script src="vendors/js/bootstrap-colorpicker.min.js"></script>
+	<script src="vendors/js/chroma.min.js"></script>
+	<script src="vendors/js/wnumb-1.1.0/wNumb.js"></script>
+	<script src="vendors/js/uislider-10.0.0/nouislider.min.js"></script>
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
 	<script src="js/cercallocs-1.0.0.js"></script>
 	<title>Població Catalunya</title>
 </head>
+
 <body>
 	<div id="div_panel">
-	<div id="titol">
-		<div id="burguer-menu-icon" class="fa fa-chevron-circle-up" aria-hidden="true">
+		<div id="titol">
+			<div id="burguer-menu-icon" class="fa fa-chevron-circle-up" aria-hidden="true">
+			</div>
+			<span class="panel-header-title">
+				<div id="title">Població de Catalunya
+					<a href="http://betaportal.icgc.cat/wordpress/poblacio/" target="_blank">
+						<i class="fa fa-info-circle gris" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div id="subtitle">Visualització i anàlisi</div>
+			</span>
 		</div>
-		<span class="panel-header-title">
-    <div id="title">Població de Catalunya <a href="http://betaportal.icgc.cat/wordpress/poblacio/" target="_blank" ><i class="fa fa-info-circle gris" aria-hidden="true"></i></a></div>
-    <div id="subtitle">Visualització i anàlisi</div>
-  </span>
-
-	</div>
-
-	<div id="div_panel_body">
-		<div class="panel-content">
-			<ul class="panel-list">
-
-				<li class="panel-list-item">
-					<div id="controlbox"></div>
-					<div id="mygrid"></div>
-				</li>
-
-
-				<li class="panel-list-item">
-					<div class="panel-item-ull">
+		<div id="div_panel_body">
+			<div class="panel-content">
+				<ul class="panel-list">
+					<li class="panel-list-item">
+						<div id="controlbox"></div>
+						<div id="mygrid"></div>
+					</li>
+					<li class="panel-list-item">
+						<div class="panel-item-ull">
 							<div class="div_gr3_estils">
-									<fieldset>
-										<legend>Dades de l'any:</legend>
-										<div class="form-group ">
-											<button type="button" data="2014" class="btn btn-any btn-xs">2014</button>
-										</div>
-										<div class="form-group ">
-											<button type="button" data="2016" class="btn btn-any btn-xs activeBTANY">2016</button>
-										</div>
-									
-									</fieldset>
-								</div>
-						<div id="menu" class="div_gr3_estils">
-
-							<fieldset>
-								<legend>Per gènere:</legend>
-								<div class="form-group ">
-									<button type="button" data="TOTAL" class="btn btn-orange btn-xs activeBT">Total</button>
-								</div>
-								<div class="form-group ">
-									<button type="button" data="DONES" class="btn btn-orange btn-xs">Dones</button>
-								</div>
-								<div class="form-group ">
-									<button type="button" data="HOMES" class="btn btn-orange btn-xs">Homes</button>
-								</div>
-							</fieldset>
-						
-						</div>
-
+								<fieldset>
+									<legend>Dades de l'any:</legend>
+									<div class="form-group ">
+										<button type="button" data="2014" class="btn btn-any btn-xs">2014</button>
+									</div>
+									<div class="form-group ">
+										<button type="button" data="2016" class="btn btn-any btn-xs activeBTANY">2016</button>
+									</div>
+								</fieldset>
+							</div>
+							<div id="menu" class="div_gr3_estils">
+								<fieldset>
+									<legend>Per gènere:</legend>
+									<div class="form-group ">
+										<button type="button" data="TOTAL" class="btn btn-orange btn-xs activeBT">Total</button>
+									</div>
+									<div class="form-group ">
+										<button type="button" data="DONES" class="btn btn-orange btn-xs">Dones</button>
+									</div>
+									<div class="form-group ">
+										<button type="button" data="HOMES" class="btn btn-orange btn-xs">Homes</button>
+									</div>
+								</fieldset>
+							</div>
 							<div class="div_gr3_estils">
-							<fieldset>
-								<legend>Per edats:</legend>
-								<div class="form-group ">
-									<button type="button" data="P_0_14" class="btn btn-orange btn-xs">0-14 anys</button>
-								</div>
-								<div class="form-group ">
-									<button type="button" data="P_15_64" class="btn btn-orange btn-xs">15-64 anys</button>
-								</div>
-								<div class="form-group ">
-									<button type="button" data="P_65_I_MES" class="btn btn-orange btn-xs">65 i +</button>
-								</div>
-							</fieldset>
-						</div>
+								<fieldset>
+									<legend>Per edats:</legend>
+									<div class="form-group ">
+										<button type="button" data="P_0_14" class="btn btn-orange btn-xs">0-14 anys</button>
+									</div>
+									<div class="form-group ">
+										<button type="button" data="P_15_64" class="btn btn-orange btn-xs">15-64 anys</button>
+									</div>
+									<div class="form-group ">
+										<button type="button" data="P_65_I_MES" class="btn btn-orange btn-xs">65 i +</button>
+									</div>
+								</fieldset>
+							</div>
 							<div class="div_gr3_estils">
-							<fieldset>
-								<legend>Per nacionalitat:</legend>
-								<div class="form-group ">
-									<button type="button" data="P_ESPANYOL" class="btn btn-orange btn-xs">Espanyola</button>
-								</div>
-								<div class="form-group ">
-									<button type="button" data="P_ESTRANGE" class="btn btn-orange btn-xs">Estrangera</button>
-								</div>
-							</fieldset>
+								<fieldset>
+									<legend>Per nacionalitat:</legend>
+									<div class="form-group ">
+										<button type="button" data="P_ESPANYOL" class="btn btn-orange btn-xs">Espanyola</button>
+									</div>
+									<div class="form-group ">
+										<button type="button" data="P_ESTRANGE" class="btn btn-orange btn-xs">Estrangera</button>
+									</div>
+								</fieldset>
+							</div>
+							<div class="div_gr3_estils">
+								<fieldset>
+									<legend>Nascuts a:</legend>
+									<div class="form-group ">
+										<button type="button" data="P_NASC_CAT" class="btn btn-orange btn-xs">Catalunya</button>
+									</div>
+									<div class="form-group ">
+										<button type="button" data="P_NASC_RES" class="btn btn-orange btn-xs">Espanya</button>
+									</div>
+									<div class="form-group ">
+										<button type="button" data="P_NASC_EST" class="btn btn-orange btn-xs">Estranger</button>
+									</div>
+								</fieldset>
+							</div>
 						</div>
-						<div class="div_gr3_estils">
-							<fieldset>
-								<legend>Nascuts a:</legend>
-								<div class="form-group ">
-									<button type="button" data="P_NASC_CAT" class="btn btn-orange btn-xs">Catalunya</button>
-								</div>
-								<div class="form-group ">
-									<button type="button" data="P_NASC_RES" class="btn btn-orange btn-xs">Espanya</button>
-								</div>
-								<div class="form-group ">
-									<button type="button" data="P_NASC_EST" class="btn btn-orange btn-xs">Estranger</button>
-								</div>
-							</fieldset>
-						</div>
-
-					</div>
-				</li>
-				<li class="panel-list-item">
-					<div class="panel-item-ull">
-						<div class="div_gr4_estils">
+					</li>
+					<li class="panel-list-item">
+						<div class="panel-item-ull">
+							<div class="div_gr4_estils">
 								<div>
-									<legend>Rangs de població:</legend></div>
+									<legend>Rangs de població:</legend>
+								</div>
 								<div id="c_init" class="colorbox"></div>
 								<div id="c_end" class="colorbox"></div>
 								<div id="ull_capa" title="Visibilitat grid població" class="fa fa-eye"></div>
 							</div>
-
-					<div class="panel-item-ull2">
-						<div id="slider"></div>
-					</div>
-				</li>
-
-				<li class="panel-list-item">
-					<div class="panel-item-ull">
-						<div id="taula_dades"></div>
-					</div>
-				</li>
-
-
-
-			</ul>
-		</div>
-
-	</div>
-
-	<div class="panel-footer">
-		<div class="panel-item-ull">
-			<small>
-			<!--
+							<div class="panel-item-ull2">
+								<div id="slider"></div>
+							</div>
+					</li>
+					<li class="panel-list-item">
+						<div class="panel-item-ull">
+							<div id="taula_dades"></div>
+						</div>
+					</li>
+				</ul>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<div class="panel-item-ull">
+					<small>
+						<!--
 			<div id="logos_icgc">
 				<a target="_blank" title="Institut Cartogràfic i Geològic de Catalunya" href="http://www.icgc.cat" class="logo_footer">
 				<img height="50" src="css/images/icgc.png">
 			</a>
 		-->
-		<p>Aplicació desenvolupada per <a target="_blank" title="Institut Cartogràfic i Geològic de Catalunya" href="http://www.icgc.cat">ICGC</a></p>
-		Font dades <a href='https://www.idescat.cat/cataleg/?tc=c&idp=172' target='_blank'>IDESCAT</a> corresponents al registre
-		 de població de Catalunya (01.01.2014 - 2016),
-		 representades en una quadrícula multiresolució de 62.5 m, 125 m i 250 m.
-		 <p>Més prototips  <a href='http://betaportal.icgc.cat/?href=grid-poblacio' target='_blank'>Betaportal</a></p>
-
-		 <div class="social_in" id="social">
-		 <a href="https://twitter.com/share" class="twitter-share-button"{count} data-text="Població Catalunya" data-via="geostarters" data-hashtags="Catalunya">Tweet</a>
-		 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-		 </div>
-		</small>
+						<p>Aplicació desenvolupada per
+							<a target="_blank" title="Institut Cartogràfic i Geològic de Catalunya" href="http://www.icgc.cat">ICGC</a>
+						</p>
+						Font dades
+						<a href='https://www.idescat.cat/cataleg/?tc=c&idp=172' target='_blank'>IDESCAT</a> corresponents al registre de població de Catalunya (01.01.2014 - 2016), representades en una quadrícula
+						multiresolució de 62.5 m, 125 m i 250 m.
+						<p>Més prototips
+							<a href='http://betaportal.icgc.cat/?href=grid-poblacio' target='_blank'>Betaportal</a>
+						</p>
+						<div class="social_in" id="social">
+							<a href="https://twitter.com/share" class="twitter-share-button" {count} data-text="Població Catalunya" data-via="geostarters"
+							  data-hashtags="Catalunya">Tweet</a>
+							<script>
+								! function (d, s, id) {
+									var js, fjs = d.getElementsByTagName(s)[0],
+										p = /^http:/.test(d.location) ? 'http' : 'https';
+									if (!d.getElementById(id)) {
+										js = d.createElement(s);
+										js.id = id;
+										js.src = p + '://platform.twitter.com/widgets.js';
+										fjs.parentNode.insertBefore(js, fjs);
+									}
+								}(document, 'script', 'twitter-wjs');
+							</script>
+						</div>
+					</small>
+				</div>
+			</div>
 		</div>
 	</div>
+	<!-- final container -->
+	<div class="social_out" id="social">
+		<a href="https://twitter.com/share" class="twitter-share-button" {count} data-text="Població Catalunya" data-via="geostarters"
+		  data-hashtags="Catalunya">Tweet</a>
+		<script>
+			! function (d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0],
+					p = /^http:/.test(d.location) ? 'http' : 'https';
+				if (!d.getElementById(id)) {
+					js = d.createElement(s);
+					js.id = id;
+					js.src = p + '://platform.twitter.com/widgets.js';
+					fjs.parentNode.insertBefore(js, fjs);
+				}
+			}(document, 'script', 'twitter-wjs');
+		</script>
 	</div>
-
-</div> <!-- final container -->
-
-<div class="social_out" id="social">
-<a href="https://twitter.com/share" class="twitter-share-button"{count} data-text="Població Catalunya" data-via="geostarters" data-hashtags="Catalunya">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div>
 	<div id='features'>
-
 	</div>
-
 	<div id='map'></div>
 	<div id='barraEines' class="mapboxgl-ctrl-group mapboxgl-ctrl">
-		<button id="bt_capture"   title="Capturar mapa" class="mapboxgl-ctrl-icon fa fa-camera"></button>
-		<button id="bt_vincle"   title="Enllaçar mapa"   class="mapboxgl-ctrl-icon fa fa-link"></button>
-
-
-
+		<button id="bt_capture" title="Capturar mapa" class="mapboxgl-ctrl-icon fa fa-camera"></button>
+		<button id="bt_vincle" title="Enllaçar mapa" class="mapboxgl-ctrl-icon fa fa-link"></button>
 	</div>
 	<div class='map-overlay' id='legend'></div>
-
 	<!-- Modal Print -->
 	<div class="modal fade" id="md_print" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h5 class="modal-title" id="myModalLabel">Capturar mapa</h5>
-	      </div>
-	      <div class="modal-body">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h5 class="modal-title" id="myModalLabel">Capturar mapa</h5>
+				</div>
+				<div class="modal-body">
+					<form onsubmit="return false;" id="config">
+						<fieldset id="config-fields">
+							<div class="row">
+								<div class="col-sm-5">
+									<div class="form-group">
+										<label>Unitats</label>
+										<br>
+										<label class="radio-inline">
+											<input type="radio" name="unitOptions" value="mm" id="mmUnit" checked> Mil·límetres
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="unitOptions" value="in" id="inUnit"> Polzades
+										</label>
 
-		<form onsubmit="return false;" id="config">
-	  <fieldset id="config-fields">
-	  <div class="row">
-	    <div class="col-sm-5">
-	      <div class="form-group">
-	        <label>Unitats</label><br>
-			<label class="radio-inline">
-	          <input type="radio" name="unitOptions" value="mm" id="mmUnit"  checked> Mil·límetres
-	        </label>
-	        <label class="radio-inline">
-	          <input type="radio" name="unitOptions" value="in" id="inUnit"> Polzades
-	        </label>
+									</div>
+								</div>
+								<div class="col-sm-5">
+									<div class="form-group">
+										<label>Format</label>
+										<br>
+										<label class="radio-inline">
+											<input type="radio" name="outputOptions" value="png" checked> PNG
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="outputOptions" value="pdf"> PDF
+										</label>
+									</div>
+								</div>
 
-	      </div>
-	    </div>
-	    <div class="col-sm-5">
-	      <div class="form-group">
-	        <label>Format</label><br>
-	        <label class="radio-inline">
-	          <input type="radio" name="outputOptions" value="png" checked> PNG
-	        </label>
-	        <label class="radio-inline">
-	          <input type="radio" name="outputOptions" value="pdf"> PDF
-	        </label>
-	      </div>
-	    </div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="form-group" id="widthGroup">
+										<label for="widthInput">Amplada</label>
+										<input type="text" class="form-control" id="widthInput" autocomplete="off" value="280">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="form-group" id="heightGroup">
+										<label for="heightInput">Alçada</label>
+										<input type="text" class="form-control" id="heightInput" autocomplete="off" value="200">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="form-group" id="dpiGroup">
+										<label for="dpiInput">DPI</label>
+										<input type="text" class="form-control" id="dpiInput" autocomplete="off" value="300">
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+					<div class="alert alert-danger" role="alert" id="error-message"></div>
 
-	  </div>
-	  <div class="row">
-	    <div class="col-sm-4">
-	      <div class="form-group" id="widthGroup">
-	        <label for="widthInput">Amplada</label>
-	        <input type="text" class="form-control" id="widthInput" autocomplete="off" value="280">
-	      </div>
-	    </div>
-	    <div class="col-sm-4">
-	      <div class="form-group" id="heightGroup">
-	        <label for="heightInput">Alçada</label>
-	        <input type="text" class="form-control" id="heightInput" autocomplete="off" value="200">
-	      </div>
-	    </div>
-	    <div class="col-sm-4">
-	      <div class="form-group" id="dpiGroup">
-	        <label for="dpiInput">DPI</label>
-	        <input type="text" class="form-control" id="dpiInput" autocomplete="off" value="300">
-	      </div>
-	    </div>
-	  </div>
-	  </fieldset>
-	</form>
-	<div class="alert alert-danger" role="alert" id="error-message"></div>
+					<div class="row">
+						<div class="col-sm-12">
+							<button type="submit" class="btn btn-success" id="generate-btn">Capturar mapa</button>
+							<div id="spinner"></div>
+						</div>
+					</div>
 
-	<div class="row">
-	  <div class="col-sm-12">
-	    <button type="submit" class="btn btn-success" id="generate-btn">Capturar mapa</button>
-	    <div id="spinner"></div>
-	  </div>
-	</div>
-
-		 </div>
-	    </div>
-	  </div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
 
 	<div id="enllacamodal" class="modal fade" tabindex="-1" role="dialog">
-	      <div class="modal-dialog" role="document">
-	        <div class="modal-content">
-	          <div class="modal-header">
-	            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h5 class="modal-title" id="myModalLabel">Enllaçar mapa</h5>
-						</div>
-	          <div class="modal-body">
-	            <div class="form-group">
-					    	<label for="urlMap"><span lang="ca">Per enllaçar amb aquest mapa, copieu i enganxeu el següent text</span>:</label>
-					    	<input class="form-control" id="urlMap" type="text">
-					  	</div>
-	            <div class="form-group">
-						  	<label for="iframeMap"><span lang="ca">Per inserir aquest mapa al vostre web, copieu i enganxeu el següent text</span>:</label>
-						  	<textarea class="form-control" rows="3" id="iframeMap"></textarea>
-					  	</div>
-	          </div>
-	        </div><!-- /.modal-content -->
-	      </div><!-- /.modal-dialog -->
-	    </div><!-- /.modal -->
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h5 class="modal-title" id="myModalLabel">Enllaçar mapa</h5>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="urlMap">
+							<span lang="ca">Per enllaçar amb aquest mapa, copieu i enganxeu el següent text</span>:</label>
+						<input class="form-control" id="urlMap" type="text">
+					</div>
+					<div class="form-group">
+						<label for="iframeMap">
+							<span lang="ca">Per inserir aquest mapa al vostre web, copieu i enganxeu el següent text</span>:</label>
+						<textarea class="form-control" rows="3" id="iframeMap"></textarea>
+					</div>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 
 
 
 
-			<div id="alertmodal" class="modal fade" tabindex="-1" role="dialog">
-			      <div class="modal-dialog" role="document">
-			        <div class="modal-content">
-			          <div class="modal-header">
-			            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			          </div>
-			          <div class="modal-body alertmodal-body">
-			          </div>
-			        </div><!-- /.modal-content -->
-			      </div><!-- /.modal-dialog -->
-			    </div><!-- /.modal -->
+	<div id="alertmodal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body alertmodal-body">
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 
 
-	<script type="text/javascript" src="/vendors/js/canvas-toBlob.min.js"></script>
-	<script type="text/javascript" src="/vendors/js/FileSaver.min.js"></script>
-	<script type="text/javascript" src="/vendors/js/jspdf.min.js"></script>
+	<script type="text/javascript" src="vendors/js/canvas-toBlob.min.js"></script>
+	<script type="text/javascript" src="vendors/js/FileSaver.min.js"></script>
+	<script type="text/javascript" src="vendors/js/jspdf.min.js"></script>
 
 	<script src="js/gridpoblacio.js"></script>
 	<script src="js/functions_print.js"></script>
-	<script src="/betaserver.google-analytics.js"></script>
+	<script src="http://betaserver.icgc.cat/betaserver.google-analytics.js"></script>
 
-<script>
-/*
-	var layerList = document.getElementById('menu');
-	var inputs = layerList.getElementsByTagName('input');
-
-	function switchLayer(layer) {
-			var layerId = layer.target.id;
-			map.setStyle('https://tilemaps.icgc.cat/tileserver/styles/' + layerId + '.json');
-	}
-
-	for (var i = 0; i < inputs.length; i++) {
-			inputs[i].onclick = switchLayer;
-	}
-*/
-</script>
+	
 
 
 </body>

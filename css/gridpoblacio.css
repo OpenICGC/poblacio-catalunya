@@ -221,7 +221,7 @@ p {
 
 #mygrid {
   position: absolute;
-  top: 53px;
+  top: 40px;
   z-index: 1000;
   width: 279px;
   height: auto;
@@ -232,6 +232,7 @@ p {
   overflow: auto;
   font-size: 0.9em;
   display: none;
+  box-shadow: 1px 1px 1px #e3e8e7;
 }
 
 #mygrid li a {

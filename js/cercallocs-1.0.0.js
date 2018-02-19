@@ -24,9 +24,7 @@ function initLlocs(container) {
   });
 
   $('#searchboxinput').on('keypress', function(event) {
-    console.info(event);
-    console.info(event.pageX);
-    console.info(event.screenX);
+   
 	  if (event.which == 13) {
     checkInput(true);
     event.preventDefault();
@@ -49,8 +47,6 @@ function initLlocs(container) {
 
 function checkInput(keyOrigen) {
   var _toponim = $("#searchboxinput").val();
-
-
 		  if (_toponim && _toponim.length > 2) {
 			sendRequest(_toponim,keyOrigen);
 		  }
@@ -66,7 +62,7 @@ function sendRequest(_toponim,keyOrigen) {
   });
 
   $.ajax({
-    url: '/icgc_geocoder/?maxresultats=7&obtenirCoordGeografiques=si&metode=localitzaToponim&ordre=alfabetic&trobaTots=no&nom=' + _toponim,
+    url: '/icgc_geocoder/?maxresultats=17&obtenirCoordGeografiques=si&tipus=Cap%20de%20Municipi&metode=localitzaToponim&ordre=alfabetic&trobaTots=no&nom=' + _toponim,
     method: 'GET',
     dataType: 'json',
     success: function(data) {
@@ -77,16 +73,14 @@ function sendRequest(_toponim,keyOrigen) {
         if (data.length >= 1) {
           var cList = $('<ul>').appendTo('#mygrid');
           $.each(data, function(index, value) {
+
             $('<li><a data="' + value.coordenadesETRS89LonLat.y + '#' + value.coordenadesETRS89LonLat.x + '" href="#"> ' +
               '<b>' + value.nom + '</b> (' + value.nomMunicipi + ')</a>').appendTo(cList);;
+              if(keyOrigen && data.length >= 1){
+                    zoomTo(value.coordenadesETRS89LonLat.y, value.coordenadesETRS89LonLat.x)
+                 
+              }
 
-
-			if(keyOrigen && data.length >= 1){
-					//if (data.length == 1) {
-
-					  zoomTo(value.coordenadesETRS89LonLat.y, value.coordenadesETRS89LonLat.x)
-					//}
-			}
 
           });
         }
