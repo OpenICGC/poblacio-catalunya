@@ -15,7 +15,7 @@ Copy the files within a folder on a web server
 
 More information at http://betaportal.icgc.cat/wordpress/poblacio/
 
-[![Població de Catalunya app example](http://betaportal.icgc.cat/wordpress/wp-content/uploads/2017/06/Poblacio_Barcelona-1024x676.png)](http://betaserver.icgc.cat/poblacio-catalunya)
+[![Població de Catalunya app example](http://betaportal.icgc.cat/wordpress/wp-content/uploads/2018/02/poblaci%C3%B3_2016_1.png)](http://betaserver.icgc.cat/poblacio-catalunya)
 
 ## License
 

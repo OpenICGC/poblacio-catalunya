@@ -812,3 +812,14 @@ tr:nth-child(even) {
   cursor: pointer;
 
 }
+
+.div_github{
+  width: 57px;
+  background-color: #333;
+  padding: 2px;
+  color: white !important;
+  border-radius: 4px;
+  /* float: inherit; */
+  cursor: pointer;
+
+}
