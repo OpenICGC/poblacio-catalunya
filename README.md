@@ -8,6 +8,8 @@ The statistical data correspond to the Institut d'Estadística de Catalunya. You
 
 **Demo:** http://betaserver.icgc.cat/poblacio-catalunya
 
+![GitHub release](https://img.shields.io/badge/release-v.1.1.0-blue.png)
+
 ## Installation
 Copy the files within a folder on a web server
 
